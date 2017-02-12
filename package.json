@@ -5,5 +5,12 @@
   "main": "vue-fraction-grid.js",
   "repository": "git@github.com:bkzl/vue-fraction-grid.git",
   "author": "Bartlomiej Kozal <bkzl@me.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vue build vue-fraction-grid.js"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
 }
