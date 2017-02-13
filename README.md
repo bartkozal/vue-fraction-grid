@@ -2,6 +2,15 @@
 
 **[work in progress]**
 
+- [ ] container
+- [ ] grid
+- [ ] grid-item
+- [ ] responsive design
+- [ ] docs & demos
+- [ ] tests
+
+**[work in progress]**
+
 Flexbox based responsive fraction grid for Vue.js
 
 [Live Demo](#TODO)
