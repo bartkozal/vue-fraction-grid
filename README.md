@@ -150,6 +150,18 @@ TODO
 </grid>
 ```
 
+```html
+<grid horizontal="around">
+  ...
+</grid>
+```
+
+```html
+<grid horizontal="between">
+  ...
+</grid>
+```
+
 TODO
 
 ```html
@@ -232,6 +244,20 @@ TODO
 
 ```html
 <grid-item size="0/1">
+  ...
+</grid-item>
+```
+
+TODO
+
+```html
+<grid-item grow="2">
+  ...
+</grid-item>
+```
+
+```html
+<grid-item shrink="0.5">
   ...
 </grid-item>
 ```
