@@ -7,15 +7,31 @@
   "author": "Bartlomiej Kozal <bkzl@me.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "vue build demo/index.js"
+    "start": "npm run demo",
+    "demo": "vue build demo/index.js",
+    "test": "NODE_ENV=production jest"
   },
   "files": [
     "vue-fraction-grid.js",
     "components",
     "utils"
   ],
+  "jest": {
+    "moduleNameMapper": {
+      "components/([^\\.]*)$": "<rootDir>/components/$1.vue"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "jest-vue-preprocessor"
+    }
+  },
   "devDependencies": {
+    "jest": "^18.1.0",
+    "jest-vue-preprocessor": "^0.1.2",
     "vue-cli": "^2.8.1"
   }
 }
