@@ -2,9 +2,10 @@
 
 **[work in progress]**
 
-- [ ] container
+- [x] container
 - [ ] grid
 - [ ] grid-item
+- [ ] settings
 - [ ] responsive design
 - [ ] demo
 - [ ] docs
@@ -58,6 +59,8 @@ TODO: demo component
 
 ### Container
 
+Syntax:
+
 ```html
 <container width="default|width">
 ```
@@ -79,6 +82,8 @@ TODO
 ```
 
 ### Grid
+
+Syntax:
 
 ```html
 <grid gutter="default|width"
@@ -222,6 +227,8 @@ TODO
 ```
 
 ### Grid Item
+
+Syntax:
 
 ```html
 <grid-item size="n/1|n/2|n/3|n/4|n/5|n/6|n/8|n/9|n/10|n/12|1/1|0/1">
