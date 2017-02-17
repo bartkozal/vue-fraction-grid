@@ -272,7 +272,7 @@ TODO
 </grid-item>
 ```
 
-## Responsive Design
+### Responsive Design
 
 TODO
 
@@ -311,4 +311,22 @@ TODO
 <grid-item size="3/4" tablet="1/1" compact="0/1">
   ...
 </grid-item>
+```
+
+### CSS Classes
+
+TODO
+
+```css
+.vfg-container {
+  ...
+}
+
+.vfg-grid {
+  ...
+}
+
+.vfg-grid-item {
+  ...
+}
 ```
