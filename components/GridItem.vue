@@ -15,7 +15,8 @@ export default {
       type: String,
       validator (value) {
         const fraction = value.split('/')
-        return fraction.length === 2 && +fraction[1] !== 0
+        const denominator = +fraction[1]
+        return fraction.length === 2 && denominator !== 0
       }
     }
   },
