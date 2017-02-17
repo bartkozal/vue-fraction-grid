@@ -12,7 +12,8 @@
   },
   "files": [
     "vue-fraction-grid.js",
-    "components"
+    "components",
+    "utils"
   ],
   "devDependencies": {
     "vue-cli": "^2.8.1"

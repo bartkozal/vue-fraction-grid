@@ -5,7 +5,7 @@
 - [x] container
 - [ ] grid
 - [ ] grid-item
-- [ ] settings
+- [x] settings
 - [ ] responsive design
 - [ ] demo
 - [ ] docs
@@ -100,12 +100,12 @@ TODO
 <grid>
   <grid-item size="1/3">
     ...
-  </div>
+  </grid-item>
 
   <grid-item size="2/3">
     ...
-  </div>
-</div>
+  </grid-item>
+</grid>
 ```
 
 TODO
