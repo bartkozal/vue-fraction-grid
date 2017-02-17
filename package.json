@@ -18,7 +18,9 @@
   ],
   "jest": {
     "moduleNameMapper": {
-      "components/([^\\.]*)$": "<rootDir>/components/$1.vue"
+      "components/(.*)$": "<rootDir>/components/$1.vue",
+      "utils/(.*)$": "<rootDir>/utils/$1.js",
+      "(.*)$": "<rootDir>/$1.js"
     },
     "moduleFileExtensions": [
       "js",
