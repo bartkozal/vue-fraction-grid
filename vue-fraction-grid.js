@@ -1,16 +1,7 @@
 import Container from './components/Container'
 import Grid from './components/Grid'
 import GridItem from './components/GridItem'
-
-const defaults = {
-  container: '1020px',
-  gutter: '24px',
-  approach: 'mobile',
-  breakpoints: {
-    compact: '320px 414px',
-    regular: '415px'
-  }
-}
+import defaults from './utils/defaults'
 
 const VueFractionGrid = {
   install (Vue, options) {

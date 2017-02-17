@@ -1,39 +1,24 @@
 import Vue from 'vue'
 import VueFractionGrid from 'vue-fraction-grid'
 import initConfig from 'utils/init-config'
+import defaults from 'utils/defaults'
 
 test('default configuration', () => {
   VueFractionGrid.install(Vue)
 
-  const container = Vue.component('container')
-  expect(container.options.config).toEqual({
-    container: '1020px',
-    gutter: '24px',
-    approach: 'mobile',
-    breakpoints: {
-      compact: '320px 414px',
-      regular: '415px'
-    }
-  })
+  expect(Vue.component('container').options.config).toEqual(defaults)
 })
 
 test('overriding default configuration', () => {
-  VueFractionGrid.install(Vue, {
+  const options = {
     container: '960px',
     gutter: '1em',
     approach: 'desktop'
-  })
+  }
 
-  const container = Vue.component('container')
-  expect(container.options.config).toEqual({
-    container: '960px',
-    gutter: '1em',
-    approach: 'desktop',
-    breakpoints: {
-      compact: '320px 414px',
-      regular: '415px'
-    }
-  })
+  VueFractionGrid.install(Vue, options)
+
+  expect(Vue.component('container').options.config).toMatchObject(options)
 })
 
 test('initConfig mixin', () => {
