@@ -6,6 +6,7 @@
 
 <script>
 import initConfig from '../utils/init-config'
+import reduceCSSCalc from 'reduce-css-calc'
 
 export default {
   name: 'grid',
@@ -13,8 +14,8 @@ export default {
   computed: {
     styleObject () {
       return {
-        marginRight: this.config.gutter / -2,
-        marginLeft: this.config.gutter / -2
+        marginRight: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
+        marginLeft: reduceCSSCalc(`calc(${this.config.gutter} / -2)`)
       }
     }
   }

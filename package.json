@@ -35,5 +35,8 @@
     "jest": "^18.1.0",
     "jest-vue-preprocessor": "^0.1.2",
     "vue-cli": "^2.8.1"
+  },
+  "dependencies": {
+    "reduce-css-calc": "^1.3.0"
   }
 }
