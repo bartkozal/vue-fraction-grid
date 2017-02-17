@@ -10,6 +10,7 @@
 - [ ] demo
 - [ ] docs
 - [ ] tests
+- [ ] linting
 
 **[work in progress]**
 
@@ -35,6 +36,8 @@ Flexbox based responsive fraction grid for Vue.js
 </container>
 ```
 
+TODO: demo component
+
 ## Installation
 
 TODO
@@ -54,8 +57,6 @@ Vue.use(VueFractionGrid, {
 ```
 
 ## API
-
-TODO: demo component
 
 ### Container
 
