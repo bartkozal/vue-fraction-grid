@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
-    "dev": "vue build vue-fraction-grid.js"
+    "dev": "vue build demo/index.js"
   },
   "files": [
     "vue-fraction-grid.js",

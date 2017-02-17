@@ -6,7 +6,8 @@
 - [ ] grid
 - [ ] grid-item
 - [ ] responsive design
-- [ ] docs & demos
+- [ ] demo
+- [ ] docs
 - [ ] tests
 
 **[work in progress]**
@@ -52,6 +53,8 @@ Vue.use(VueFractionGrid, {
 ```
 
 ## API
+
+TODO: demo component
 
 ### Container
 
