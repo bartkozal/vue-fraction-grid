@@ -10,6 +10,10 @@
     "start": "npm run dev",
     "dev": "vue build vue-fraction-grid.js"
   },
+  "files": [
+    "vue-fraction-grid.js",
+    "components"
+  ],
   "devDependencies": {
     "vue-cli": "^2.8.1"
   }
