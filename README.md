@@ -1,5 +1,7 @@
 # vue-fraction-grid
 
+[![Build Status](https://travis-ci.org/bkzl/vue-fraction-grid.svg?branch=master)](https://travis-ci.org/bkzl/vue-fraction-grid)
+
 **[work in progress]**
 
 - [x] container
