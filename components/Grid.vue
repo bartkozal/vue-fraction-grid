@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import initConfig from '../utils/init-config'
 import reduceCSSCalc from 'reduce-css-calc'
+import initConfig from '../utils/init-config'
 
 export default {
   name: 'grid',

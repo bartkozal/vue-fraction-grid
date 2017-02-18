@@ -9,7 +9,7 @@
 - [ ] responsive design
 - [ ] demo
 - [ ] docs
-- [ ] tests
+- [x] tests
 - [ ] linting
 
 **[work in progress]**

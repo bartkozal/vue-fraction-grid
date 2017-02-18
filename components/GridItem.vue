@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import reduceCSSCalc from 'reduce-css-calc'
 import initConfig from '../utils/init-config'
 
 export default {
@@ -12,6 +13,7 @@ export default {
   mixins: [initConfig],
   props: {
     size: {
+      required: true,
       type: String,
       validator (value) {
         const fraction = value.split('/')
@@ -23,14 +25,14 @@ export default {
   computed: {
     styleObject () {
       return {
-        paddingRight: this.config.gutter / 2,
-        paddingLeft: this.config.gutter / 2,
+        paddingRight: reduceCSSCalc(`calc(${this.config.gutter} / 2)`),
+        paddingLeft: reduceCSSCalc(`calc(${this.config.gutter} / 2)`),
         flexBasis: this.percentageWidth
       }
     },
     percentageWidth () {
       const [numerator, denominator] = this.size.split('/')
-      const value = +numerator * 100 / +denominator
+      const value = (+numerator * 100 / +denominator).toFixed(4)
       return `${value}%`
     }
   }
