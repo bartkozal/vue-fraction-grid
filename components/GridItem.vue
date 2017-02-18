@@ -28,7 +28,8 @@ export default {
       return {
         paddingRight: this.horizontalPadding,
         paddingLeft: this.horizontalPadding,
-        flexBasis: this.percentageWidth
+        flexBasis: this.percentageWidth,
+        maxWidth: this.percentageWidth
       }
     },
     horizontalPadding () {

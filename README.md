@@ -5,7 +5,7 @@
 **[work in progress]**
 
 - [x] container
-- [ ] grid
+- [x] grid
 - [ ] grid-item
 - [x] settings
 - [ ] responsive design

@@ -6,10 +6,10 @@ const config = {
   gutter: '24px'
 }
 
-const getGrid = ({ horizontal, vertical }) => {
+const getGrid = ({ horizontal, vertical, direction }) => {
   return new Vue({
     extends: Grid,
-    propsData: { horizontal, vertical },
+    propsData: { horizontal, vertical, direction },
     config
   }).$mount()
 }
@@ -33,7 +33,10 @@ test('styleObject', () => {
 
   expect(vm.styleObject).toEqual({
     marginRight: '-12px',
-    marginLeft: '-12px'
+    marginLeft: '-12px',
+    justifyContent: undefined,
+    alignItems: undefined,
+    flexDirection: 'row'
   })
 })
 
@@ -51,7 +54,8 @@ test('styleObject with horizontal and vertical props', () => {
     marginRight: '-12px',
     marginLeft: '-12px',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    flexDirection: 'row'
   })
 })
 
@@ -98,4 +102,10 @@ test('alignItems', () => {
   expect(getGrid({ vertical: 'top' }).alignItems).toEqual('flex-start')
   expect(getGrid({ vertical: 'middle' }).alignItems).toEqual('center')
   expect(getGrid({ vertical: 'bottom' }).alignItems).toEqual('flex-end')
+})
+
+test('flexDirection', () => {
+  expect(getGrid({ direction: 'reverse' }).flexDirection).toEqual('row-reverse')
+  expect(getGrid({ direction: 'stack' }).flexDirection).toEqual('column')
+  expect(getGrid({ direction: 'stack-reverse' }).flexDirection).toEqual('column-reverse')
 })

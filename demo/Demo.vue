@@ -212,6 +212,48 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid direction="reverse">
+          <grid-item size="1/3">
+            1/3
+          </grid-item>
+
+          <grid-item size="2/3">
+            2/3
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid direction="stack">
+          <grid-item size="1/3">
+            1/3
+          </grid-item>
+
+          <grid-item size="2/3">
+            2/3
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid direction="stack-reverse">
+          <grid-item size="1/3">
+            1/3
+          </grid-item>
+
+          <grid-item size="2/3">
+            2/3
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>

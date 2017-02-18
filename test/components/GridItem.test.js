@@ -36,6 +36,7 @@ test('styleObject', () => {
   expect(vm.styleObject).toEqual({
     paddingRight: '12px',
     paddingLeft: '12px',
-    flexBasis: '50.0000%'
+    flexBasis: '50.0000%',
+    maxWidth: '50.0000%'
   })
 })

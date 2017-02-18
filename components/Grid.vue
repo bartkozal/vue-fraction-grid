@@ -16,7 +16,8 @@ export default {
     horizontal: String,
     vertical: String,
     flat: String,
-    pair: String
+    pair: String,
+    direction: String
   },
   computed: {
     classObject () {
@@ -29,7 +30,8 @@ export default {
         marginRight: this.horizontalMargin,
         marginLeft: this.horizontalMargin,
         justifyContent: this.justifyContent,
-        alignItems: this.alignItems
+        alignItems: this.alignItems,
+        flexDirection: this.flexDirection
       }
     },
     horizontalMargin () {
@@ -51,6 +53,13 @@ export default {
         middle: 'center',
         bottom: 'flex-end'
       }[this.vertical]
+    },
+    flexDirection () {
+      return isUndefined(this.direction) ? 'row' : {
+        reverse: 'row-reverse',
+        stack: 'column',
+        'stack-reverse': 'column-reverse'
+      }[this.direction]
     }
   }
 }
@@ -61,7 +70,6 @@ export default {
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
