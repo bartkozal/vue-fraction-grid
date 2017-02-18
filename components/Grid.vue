@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .vfg-grid {
   box-sizing: border-box;
   display: flex;

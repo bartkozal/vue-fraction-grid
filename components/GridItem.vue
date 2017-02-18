@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .vfg-grid-item {
   box-sizing: border-box;
 }

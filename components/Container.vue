@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .vfg-container {
   box-sizing: border-box;
   margin: auto;
