@@ -48,6 +48,28 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item size="2/3">
+            <grid>
+              <grid-item size="1/2">
+                2/3 -> 1/2
+              </grid-item>
+
+              <grid-item size="1/2">
+                2/3 -> 1/2
+              </grid-item>
+            </grid>
+          </grid-item>
+
+          <grid-item size="1/3">
+            1/3
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>
