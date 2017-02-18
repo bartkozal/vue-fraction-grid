@@ -59,6 +59,7 @@ export default {
 
       if (isSize) {
         return Object.assign(stylePadding, {
+          width: this.percentageWidth,
           flexBasis: this.percentageWidth,
           maxWidth: this.percentageWidth
         })

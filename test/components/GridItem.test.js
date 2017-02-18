@@ -15,7 +15,8 @@ test('styleObject', () => {
     paddingRight: '12px',
     paddingLeft: '12px',
     flexBasis: '50.0000%',
-    maxWidth: '50.0000%'
+    maxWidth: '50.0000%',
+    width: '50.0000%'
   })
 
   expect(getGridItem({ grow: '2' }).styleObject).toEqual({
