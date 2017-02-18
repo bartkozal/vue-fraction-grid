@@ -1,5 +1,5 @@
 <template>
-  <div class="vfg-grid-item" :style="styleObject">
+  <div class="vfg-grid-item" :style="styleObject" v-show="!isSizeZero">
     <slot></slot>
   </div>
 </template>
@@ -24,6 +24,9 @@ export default {
     }
   },
   computed: {
+    isSizeZero () {
+      return this.size === '0/1'
+    },
     styleObject () {
       return {
         paddingRight: this.horizontalPadding,

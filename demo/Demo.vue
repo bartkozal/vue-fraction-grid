@@ -56,11 +56,11 @@
           <grid-item size="2/3">
             <grid>
               <grid-item size="1/2">
-                2/3 -> 1/2
+                2/3 > 1/2
               </grid-item>
 
               <grid-item size="1/2">
-                2/3 -> 1/2
+                2/3 > 1/2
               </grid-item>
             </grid>
           </grid-item>
@@ -251,6 +251,42 @@
 
           <grid-item size="2/3">
             2/3
+          </grid-item>
+        </grid>
+      </container>
+    </section>
+
+    <section data-name="grid-item">
+      <h2>GridItem</h2>
+
+      <container>
+        <grid>
+          <grid-item size="5/8">
+            5/8
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item size="1/1">
+            1/1
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item size="0/1">
+            0/1
+          </grid-item>
+
+          <grid-item size="1/2">
+            0/1 + 1/2
           </grid-item>
         </grid>
       </container>

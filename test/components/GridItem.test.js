@@ -13,6 +13,17 @@ const getGridItem = ({ size }) => {
   }).$mount()
 }
 
+test('styleObject', () => {
+  const vm = getGridItem({ size: '1/2' })
+
+  expect(vm.styleObject).toEqual({
+    paddingRight: '12px',
+    paddingLeft: '12px',
+    flexBasis: '50.0000%',
+    maxWidth: '50.0000%'
+  })
+})
+
 test('size validation', () => {
   console.error = jest.fn()
 
@@ -30,13 +41,7 @@ test('percentageWidth', () => {
   expect(getGridItem({ size: '1/12' }).percentageWidth).toEqual('8.3333%')
 })
 
-test('styleObject', () => {
-  const vm = getGridItem({ size: '1/2' })
-
-  expect(vm.styleObject).toEqual({
-    paddingRight: '12px',
-    paddingLeft: '12px',
-    flexBasis: '50.0000%',
-    maxWidth: '50.0000%'
-  })
+test('isSizeZero', () => {
+  expect(getGridItem({ size: '5/8' }).isSizeZero).toEqual(false)
+  expect(getGridItem({ size: '0/1' }).isSizeZero).toEqual(true)
 })
