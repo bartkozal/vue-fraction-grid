@@ -307,3 +307,9 @@ TODO
   ...
 </grid-item>
 ```
+
+* * *
+
+Code is open sourced [on GitHub](https://github.com/bkzl/vue-fraction-grid). Up to date changelog is available under [the releases section](https://github.com/bkzl/vue-fraction-grid/releases).
+
+I appreciate any comments, feedback, and information about potential issues. Have you experienced a bug or noticed a mistake in documentation? Please [add a new issue](https://github.com/bkzl/vue-fraction-grid/issues). Thanks!
