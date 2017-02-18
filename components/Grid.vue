@@ -11,12 +11,25 @@ import initConfig from '../utils/init-config'
 export default {
   name: 'grid',
   mixins: [initConfig],
+  props: {
+    horizontal: String
+  },
   computed: {
     styleObject () {
       return {
         marginRight: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
-        marginLeft: reduceCSSCalc(`calc(${this.config.gutter} / -2)`)
+        marginLeft: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
+        justifyContent: this.justifyContent
       }
+    },
+    justifyContent () {
+      return {
+        left: 'flex-start',
+        center: 'center',
+        right: 'flex-end',
+        between: 'space-between',
+        around: 'space-around'
+      }[this.horizontal]
     }
   }
 }

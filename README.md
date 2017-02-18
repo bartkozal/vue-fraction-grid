@@ -137,14 +137,6 @@ TODO
 TODO
 
 ```html
-<grid gutter="1rem">
-  ...
-</grid>
-```
-
-TODO
-
-```html
 <grid horizontal="left">
   ...
 </grid>

@@ -70,6 +70,64 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="left">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="center">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="right">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="around">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="between">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>
