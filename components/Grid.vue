@@ -7,7 +7,9 @@
 <script>
 import reduceCSSCalc from 'reduce-css-calc'
 import isUndefined from 'lodash.isundefined'
+import forEach from 'lodash.foreach'
 import initConfig from '../utils/init-config'
+import mediaQueryString from '../utils/media-query-string'
 
 export default {
   name: 'grid',
@@ -17,7 +19,37 @@ export default {
     vertical: String,
     flat: String,
     pair: String,
-    direction: String
+    direction: {
+      type: String,
+      default: 'row'
+    },
+    rwd: Object
+  },
+  created () {
+    if (!isUndefined(this.rwd)) {
+      forEach(this.rwd, (gridDirection, breakpoint) => {
+        const mediaQuery = window.matchMedia(mediaQueryString({
+          approach: this.config.approach,
+          query: this.config.breakpoints[breakpoint]
+        }))
+
+        if (mediaQuery.matches) {
+          this.gridDirection = gridDirection
+        }
+        mediaQuery.addListener(listener => {
+          if (listener.matches) {
+            this.gridDirection = gridDirection
+          } else {
+            this.gridDirection = this.direction
+          }
+        })
+      })
+    }
+  },
+  data () {
+    return {
+      flexDirection: this.reduceDirection(this.direction)
+    }
   },
   computed: {
     classObject () {
@@ -29,16 +61,16 @@ export default {
       return {
         marginRight: this.horizontalMargin,
         marginLeft: this.horizontalMargin,
-        justifyContent: this.justifyContent,
-        alignItems: this.alignItems,
-        flexDirection: this.flexDirection
+        justifyContent: this.gridHorizontal,
+        alignItems: this.gridVertical,
+        flexDirection: this.gridDirection
       }
     },
     horizontalMargin () {
       return isUndefined(this.flat) ?
         reduceCSSCalc(`calc(${this.config.gutter} / -2)`) : 0
     },
-    justifyContent () {
+    gridHorizontal () {
       return {
         left: 'flex-start',
         center: 'center',
@@ -47,19 +79,30 @@ export default {
         around: 'space-around'
       }[this.horizontal]
     },
-    alignItems () {
+    gridVertical () {
       return {
         top: 'flex-start',
         middle: 'center',
         bottom: 'flex-end'
       }[this.vertical]
     },
-    flexDirection () {
-      return isUndefined(this.direction) ? 'row' : {
+    gridDirection: {
+      get () {
+        return this.flexDirection
+      },
+      set (direction) {
+        this.flexDirection = this.reduceDirection(direction)
+      }
+    }
+  },
+  methods: {
+    reduceDirection (direction) {
+      return {
+        row: 'row',
         reverse: 'row-reverse',
         stack: 'column',
         'stack-reverse': 'column-reverse'
-      }[this.direction]
+      }[direction]
     }
   }
 }

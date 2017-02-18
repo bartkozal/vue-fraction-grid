@@ -3,13 +3,17 @@ import Grid from 'components/Grid'
 import GridItem from 'components/GridItem'
 
 const config = {
-  gutter: '24px'
+  gutter: '24px',
+  approach: 'mobile',
+  breakpoints: {
+    compact: '320px 414px'
+  }
 }
 
-const getGrid = ({ horizontal, vertical, direction }) => {
+const getGrid = ({ horizontal, vertical, direction, rwd }) => {
   return new Vue({
     extends: Grid,
-    propsData: { horizontal, vertical, direction },
+    propsData: { horizontal, vertical, direction, rwd },
     config
   }).$mount()
 }
@@ -90,22 +94,56 @@ test('pair prop', () => {
   })
 })
 
-test('justifyContent', () => {
-  expect(getGrid({ horizontal: 'left' }).justifyContent).toEqual('flex-start')
-  expect(getGrid({ horizontal: 'center' }).justifyContent).toEqual('center')
-  expect(getGrid({ horizontal: 'right' }).justifyContent).toEqual('flex-end')
-  expect(getGrid({ horizontal: 'between' }).justifyContent).toEqual('space-between')
-  expect(getGrid({ horizontal: 'around' }).justifyContent).toEqual('space-around')
+
+describe('rwd prop', () => {
+  const mockMatchMediaWith = (matches) => {
+    const addListener = jest.fn()
+    window.matchMedia = () => {
+      return { matches, addListener }
+    }
+    return addListener
+  }
+
+  test('override grid direction when prop exists and media matches', () => {
+    const listener = mockMatchMediaWith(true)
+    const grid = getGrid({ direction: 'reverse', rwd: { compact: 'stack' }})
+
+    expect(grid.gridDirection).toEqual('column')
+    expect(listener).toHaveBeenCalledTimes(1)
+  })
+
+  test('dont override grid direction when prop exists and media doesnt matches', () => {
+    const listener = mockMatchMediaWith(false)
+    const grid = getGrid({ rwd: { compact: 'stack-reverse' }})
+
+    expect(grid.gridDirection).toEqual('row')
+    expect(listener).toHaveBeenCalledTimes(1)
+  })
+
+  test('dont override grid direction when prop doesnt exists', () => {
+    const listener = mockMatchMediaWith(true)
+
+    expect(getGrid({ horizontal: 'left' }).gridDirection).toEqual('row')
+    expect(listener).toHaveBeenCalledTimes(0)
+  })
 })
 
-test('alignItems', () => {
-  expect(getGrid({ vertical: 'top' }).alignItems).toEqual('flex-start')
-  expect(getGrid({ vertical: 'middle' }).alignItems).toEqual('center')
-  expect(getGrid({ vertical: 'bottom' }).alignItems).toEqual('flex-end')
+test('gridHorizontal', () => {
+  expect(getGrid({ horizontal: 'left' }).gridHorizontal).toEqual('flex-start')
+  expect(getGrid({ horizontal: 'center' }).gridHorizontal).toEqual('center')
+  expect(getGrid({ horizontal: 'right' }).gridHorizontal).toEqual('flex-end')
+  expect(getGrid({ horizontal: 'between' }).gridHorizontal).toEqual('space-between')
+  expect(getGrid({ horizontal: 'around' }).gridHorizontal).toEqual('space-around')
 })
 
-test('flexDirection', () => {
-  expect(getGrid({ direction: 'reverse' }).flexDirection).toEqual('row-reverse')
-  expect(getGrid({ direction: 'stack' }).flexDirection).toEqual('column')
-  expect(getGrid({ direction: 'stack-reverse' }).flexDirection).toEqual('column-reverse')
+test('gridVertical', () => {
+  expect(getGrid({ vertical: 'top' }).gridVertical).toEqual('flex-start')
+  expect(getGrid({ vertical: 'middle' }).gridVertical).toEqual('center')
+  expect(getGrid({ vertical: 'bottom' }).gridVertical).toEqual('flex-end')
+})
+
+test('gridDirection', () => {
+  expect(getGrid({ direction: 'reverse' }).gridDirection).toEqual('row-reverse')
+  expect(getGrid({ direction: 'stack' }).gridDirection).toEqual('column')
+  expect(getGrid({ direction: 'stack-reverse' }).gridDirection).toEqual('column-reverse')
 })

@@ -319,6 +319,36 @@
         </grid>
       </container>
     </section>
+
+    <section data-name="Responsive Design">
+      <h2>Responsive Design (compact mode &lt; 415px)</h2>
+
+      <container>
+        <grid :rwd="{compact: 'reverse'}">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+
+          <grid-item size="3/4">
+            3/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid direction="stack" :rwd="{compact: 'stack-reverse'}">
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+
+          <grid-item size="3/4">
+            3/4
+          </grid-item>
+        </grid>
+      </container>
+    </section>
   </div>
 </template>
 

@@ -53,8 +53,7 @@ Vue.use(VueFractionGrid, {
   gutter: '24px',           // TODO
   approach: 'mobile',       // TODO
   breakpoints: {            // TODO
-    compact: '320px 414px',
-    regular: '415px'
+    compact: '320px 414px'
   }
 })
 ```
@@ -229,7 +228,7 @@ TODO
 Syntax:
 
 ```html
-<grid-item size="n/1|n/2|n/3|n/4|n/5|n/6|n/8|n/9|n/10|n/12|1/1|0/1">
+<grid-item size="n/m">
 ```
 
 TODO
@@ -278,7 +277,7 @@ TODO
 Vue.use(VueFractionGrid, {
   approach: 'desktop',
   breakpoints: {
-    compact: '415'
+    compact: '415px'
   }
 })
 ```
@@ -286,19 +285,13 @@ Vue.use(VueFractionGrid, {
 TODO
 
 ```html
-<grid compact="reverse">
+<grid :rwd="{compact: 'reverse'}">
   ...
 </grid>
 ```
 
 ```html
-<grid compact="stack">
-  ...
-</grid>
-```
-
-```html
-<grid compact="stack-reverse">
+<grid direction="stack" :rwd="{compact: 'stack-reverse'}">
   ...
 </grid>
 ```
@@ -306,7 +299,7 @@ TODO
 TODO
 
 ```html
-<grid-item size="3/4" tablet="1/1" compact="0/1">
+<grid-item size="3/4" :rwd="{compact: '0/1'}">
   ...
 </grid-item>
 ```
