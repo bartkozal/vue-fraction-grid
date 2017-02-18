@@ -11,6 +11,7 @@
 - [ ] docs
 - [x] tests
 - [ ] linting
+- [ ] dist
 
 **[work in progress]**
 
@@ -46,7 +47,7 @@ TODO
 
 ```js
 Vue.use(VueFractionGrid, {
-  container: '1020px',      // TODO
+  container: '1020px',      // TODO 100% for fluid
   gutter: '24px',           // TODO
   approach: 'mobile',       // TODO
   breakpoints: {            // TODO
@@ -55,6 +56,8 @@ Vue.use(VueFractionGrid, {
   }
 })
 ```
+
+TODO image
 
 ## API
 
