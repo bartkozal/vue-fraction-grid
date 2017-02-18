@@ -12,7 +12,7 @@
 - [x] demo
 - [ ] docs
 - [x] tests
-- [ ] linting
+- [x] linting
 - [ ] dist
 
 **[work in progress]**

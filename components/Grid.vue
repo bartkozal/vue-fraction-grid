@@ -58,8 +58,8 @@ export default {
       }
     },
     horizontalMargin () {
-      return isUndefined(this.flat) ?
-        reduceCSSCalc(`calc(${this.config.gutter} / -2)`) : 0
+      return isUndefined(this.flat)
+        ? reduceCSSCalc(`calc(${this.config.gutter} / -2)`) : 0
     },
     gridHorizontal () {
       return {

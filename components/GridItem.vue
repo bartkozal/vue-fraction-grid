@@ -67,13 +67,13 @@ export default {
 
       if (isGrow) {
         return Object.assign(stylePadding, {
-          flexGrow: +this.grow,
+          flexGrow: +this.grow
         })
       }
 
       if (isShrink) {
         return Object.assign(stylePadding, {
-          flexShrink: +this.shrink,
+          flexShrink: +this.shrink
         })
       }
 
@@ -81,8 +81,8 @@ export default {
     },
     horizontalPadding () {
       const notFlatGridChild = isUndefined(this.$parent) || isUndefined(this.$parent.flat)
-      return notFlatGridChild ?
-        reduceCSSCalc(`calc(${this.config.gutter} / 2)`) : 0
+      return notFlatGridChild
+        ? reduceCSSCalc(`calc(${this.config.gutter} / 2)`) : 0
     },
     gridItemSize: {
       get () {
