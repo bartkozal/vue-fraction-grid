@@ -310,21 +310,3 @@ TODO
   ...
 </grid-item>
 ```
-
-### CSS Classes
-
-TODO
-
-```css
-.vfg-container {
-  ...
-}
-
-.vfg-grid {
-  ...
-}
-
-.vfg-grid-item {
-  ...
-}
-```
