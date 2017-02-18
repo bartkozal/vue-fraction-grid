@@ -24,6 +24,7 @@ test('overriding default configuration', () => {
 test('initConfig mixin', () => {
   const vm = new Vue({
     config: {foo: 'bar'},
+    render: h => h(),
     mixins: [initConfig]
   }).$mount()
 

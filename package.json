@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run demo",
     "demo": "vue build demo/index.js",
-    "test": "NODE_ENV=production jest"
+    "test": "jest --silent"
   },
   "files": [
     "vue-fraction-grid.js",
