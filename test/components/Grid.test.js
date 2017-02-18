@@ -14,6 +14,17 @@ const getGrid = ({ horizontal, vertical }) => {
   }).$mount()
 }
 
+test('classObject', () => {
+  const vm = new Vue({
+    extends: Grid,
+    config
+  }).$mount()
+
+  expect(vm.classObject).toEqual({
+    'vfg-grid-pair': false
+  })
+})
+
 test('styleObject', () => {
   const vm = new Vue({
     extends: Grid,
@@ -59,6 +70,20 @@ test('flat prop', () => {
 
   expect(vm.horizontalMargin).toEqual(0)
   expect(vm.$children[0].horizontalPadding).toEqual(0)
+})
+
+test('pair prop', () => {
+  const vm = new Vue({
+    extends: Grid,
+    propsData: {
+      pair: ''
+    },
+    config
+  }).$mount()
+
+  expect(vm.classObject).toEqual({
+    'vfg-grid-pair': true
+  })
 })
 
 test('justifyContent', () => {

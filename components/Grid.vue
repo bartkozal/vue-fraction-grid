@@ -1,5 +1,5 @@
 <template>
-  <div class="vfg-grid" :style="styleObject">
+  <div class="vfg-grid" :class="classObject" :style="styleObject">
     <slot></slot>
   </div>
 </template>
@@ -15,9 +15,15 @@ export default {
   props: {
     horizontal: String,
     vertical: String,
-    flat: String
+    flat: String,
+    pair: String
   },
   computed: {
+    classObject () {
+      return {
+        'vfg-grid-pair': !isUndefined(this.pair)
+      }
+    },
     styleObject () {
       return {
         marginRight: this.horizontalMargin,
@@ -57,5 +63,13 @@ export default {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.vfg-grid-pair > .vfg-grid-item {
+  text-align: left;
+}
+
+.vfg-grid-pair > .vfg-grid-item + .vfg-grid-item {
+  text-align: right;
 }
 </style>
