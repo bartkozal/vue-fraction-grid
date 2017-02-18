@@ -23,16 +23,16 @@ Flexbox based responsive fraction grid for Vue.js
 
 ```html
 <container>
-  <grid vertical="middle" compact="stack">
-    <grid-item size="1/6" compact="0/1">
+  <grid vertical="middle" :rwd="{compact: 'stack'}">
+    <grid-item size="1/6" :rwd="{compact: '0/1'}">
       ...
     </grid-item>
 
-    <grid-item size="3/6" compact="1/1">
+    <grid-item size="3/6" :rwd="{compact: '1/1'}">
       ...
     </grid-item>
 
-    <grid-item size="2/6" compact="1/1">
+    <grid-item size="2/6" :rwd="{compact: '1/1'}">
       ...
     </grid-item>
   </grid>
