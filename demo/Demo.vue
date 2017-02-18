@@ -184,6 +184,20 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid flat>
+          <grid-item size="3/4">
+            3/4
+          </grid-item>
+
+          <grid-item size="1/4">
+            1/4
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>

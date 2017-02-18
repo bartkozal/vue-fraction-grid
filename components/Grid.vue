@@ -6,6 +6,7 @@
 
 <script>
 import reduceCSSCalc from 'reduce-css-calc'
+import isUndefined from 'lodash.isundefined'
 import initConfig from '../utils/init-config'
 
 export default {
@@ -13,16 +14,21 @@ export default {
   mixins: [initConfig],
   props: {
     horizontal: String,
-    vertical: String
+    vertical: String,
+    flat: String
   },
   computed: {
     styleObject () {
       return {
-        marginRight: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
-        marginLeft: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
+        marginRight: this.horizontalMargin,
+        marginLeft: this.horizontalMargin,
         justifyContent: this.justifyContent,
         alignItems: this.alignItems
       }
+    },
+    horizontalMargin () {
+      return isUndefined(this.flat) ?
+        reduceCSSCalc(`calc(${this.config.gutter} / -2)`) : 0
     },
     justifyContent () {
       return {

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Grid from 'components/Grid'
+import GridItem from 'components/GridItem'
 
 const config = {
   gutter: '24px'
@@ -8,10 +9,7 @@ const config = {
 const getGrid = ({ horizontal, vertical }) => {
   return new Vue({
     extends: Grid,
-    propsData: {
-      horizontal: horizontal,
-      vertical: vertical
-    },
+    propsData: { horizontal, vertical },
     config
   }).$mount()
 }
@@ -28,7 +26,7 @@ test('styleObject', () => {
   })
 })
 
-test('styleObject with props', () => {
+test('styleObject with horizontal and vertical props', () => {
   const vm = new Vue({
     extends: Grid,
     propsData: {
@@ -44,6 +42,23 @@ test('styleObject with props', () => {
     justifyContent: 'flex-start',
     alignItems: 'flex-start'
   })
+})
+
+test('flat prop', () => {
+  const vm = new Vue({
+    extends: Grid,
+    propsData: {
+      flat: ''
+    },
+    components: {
+      GridItem
+    },
+    render: h => h('div', [h('grid-item', { props: { size: '1/2' }})]),
+    config
+  }).$mount()
+
+  expect(vm.horizontalMargin).toEqual(0)
+  expect(vm.$children[0].horizontalPadding).toEqual(0)
 })
 
 test('justifyContent', () => {

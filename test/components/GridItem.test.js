@@ -19,6 +19,7 @@ test('size validation', () => {
   getGridItem({ size: '1/0' })
   getGridItem({ size: '1' })
   getGridItem({ size: '1/3/1' })
+
   expect(console.error).toHaveBeenCalledTimes(3)
 })
 

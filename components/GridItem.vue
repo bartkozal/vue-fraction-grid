@@ -6,6 +6,7 @@
 
 <script>
 import reduceCSSCalc from 'reduce-css-calc'
+import isUndefined from 'lodash.isundefined'
 import initConfig from '../utils/init-config'
 
 export default {
@@ -25,10 +26,15 @@ export default {
   computed: {
     styleObject () {
       return {
-        paddingRight: reduceCSSCalc(`calc(${this.config.gutter} / 2)`),
-        paddingLeft: reduceCSSCalc(`calc(${this.config.gutter} / 2)`),
+        paddingRight: this.horizontalPadding,
+        paddingLeft: this.horizontalPadding,
         flexBasis: this.percentageWidth
       }
+    },
+    horizontalPadding () {
+      const notFlatGridChild = isUndefined(this.$parent) || isUndefined(this.$parent.flat)
+      return notFlatGridChild ?
+        reduceCSSCalc(`calc(${this.config.gutter} / 2)`) : 0
     },
     percentageWidth () {
       const [numerator, denominator] = this.size.split('/')
