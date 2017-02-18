@@ -8,10 +8,11 @@
 import reduceCSSCalc from 'reduce-css-calc'
 import isUndefined from 'lodash.isundefined'
 import initConfig from '../utils/init-config'
+import initRWD from '../utils/init-rwd'
 
 export default {
   name: 'grid-item',
-  mixins: [initConfig],
+  mixins: [initConfig, initRWD],
   props: {
     size: {
       type: String,
@@ -24,9 +25,28 @@ export default {
     grow: [String, Number],
     shrink: [String, Number]
   },
+  created () {
+    this.bindMediaQueries((mediaQuery, gridItemSize) => {
+      if (mediaQuery.matches) {
+        this.gridItemSize = gridItemSize
+      }
+      mediaQuery.addListener(listener => {
+        if (listener.matches) {
+          this.gridItemSize = gridItemSize
+        } else {
+          this.gridItemSize = this.size
+        }
+      })
+    })
+  },
+  data () {
+    return {
+      fraction: this.size
+    }
+  },
   computed: {
     isSizeZero () {
-      return this.size === '0/1'
+      return this.gridItemSize === '0/1'
     },
     styleObject () {
       const stylePadding = {
@@ -63,8 +83,16 @@ export default {
       return notFlatGridChild ?
         reduceCSSCalc(`calc(${this.config.gutter} / 2)`) : 0
     },
+    gridItemSize: {
+      get () {
+        return this.fraction
+      },
+      set (fraction) {
+        this.fraction = fraction
+      }
+    },
     percentageWidth () {
-      const [numerator, denominator] = this.size.split('/')
+      const [numerator, denominator] = this.gridItemSize.split('/')
       const value = (+numerator * 100 / +denominator).toFixed(4)
       return `${value}%`
     }

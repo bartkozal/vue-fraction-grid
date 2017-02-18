@@ -8,8 +8,8 @@
 - [x] grid
 - [x] grid-item
 - [x] settings
-- [ ] responsive design
-- [ ] demo
+- [x] responsive design
+- [x] demo
 - [ ] docs
 - [x] tests
 - [ ] linting
@@ -96,7 +96,8 @@ Syntax:
       vertical="top|middle|bottom"
       direction="reverse|stack|stack-reverse"
       flat="flat"
-      pair="pair">
+      pair="pair"
+      :rwd="{}">
 ```
 
 TODO
@@ -228,7 +229,10 @@ TODO
 Syntax:
 
 ```html
-<grid-item size="n/m">
+<grid-item size="n/m" or
+           grow="n" or
+           shrink="n"
+           :rwd="{}">
 ```
 
 TODO

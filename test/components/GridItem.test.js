@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import GridItem from 'components/GridItem'
+import { mockMatchMedia, config } from '../helpers'
 
-const config = { gutter: '24px' }
-
-const getGridItem = ({ size, grow, shrink }) => {
+const getGridItem = ({ size, grow, shrink, rwd }) => {
   return new Vue({
     extends: GridItem,
-    propsData: { size, grow, shrink },
+    propsData: { size, grow, shrink, rwd },
     config
   }).$mount()
 }
@@ -40,6 +39,33 @@ test('size validation', () => {
   getGridItem({ size: '1/3/1' })
 
   expect(console.error).toHaveBeenCalledTimes(3)
+})
+
+describe('rwd prop', () => {
+  test('override grid item size when prop exists and media matches', () => {
+    const listener = mockMatchMedia(true)
+    const gridItem = getGridItem({ size: '1/2', rwd: { compact: '0/1' }})
+
+    expect(gridItem.gridItemSize).toEqual('0/1')
+    expect(gridItem.isSizeZero).toEqual(true)
+    expect(listener).toHaveBeenCalledTimes(1)
+  })
+
+  test('dont override grid item size when prop exists and media doesnt matches', () => {
+    const listener = mockMatchMedia(false)
+    const gridItem = getGridItem({ size: '1/2', rwd: { compact: '1/1' }})
+
+    expect(gridItem.gridItemSize).toEqual('1/2')
+    expect(listener).toHaveBeenCalledTimes(1)
+  })
+
+  test('dont override grid item size when prop doesnt exists', () => {
+    const listener = mockMatchMedia(true)
+    const gridItem = getGridItem({ size: '1/3' })
+
+    expect(gridItem.gridItemSize).toEqual('1/3')
+    expect(listener).toHaveBeenCalledTimes(0)
+  })
 })
 
 test('percentageWidth', () => {

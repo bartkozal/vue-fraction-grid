@@ -20,7 +20,7 @@
       </container>
     </section>
 
-    <section data-name="container">
+    <section data-name="Container">
       <h2>Container</h2>
 
       <container>
@@ -34,7 +34,7 @@
       </container>
     </section>
 
-    <section data-name="grid">
+    <section data-name="Grid">
       <h2>Grid</h2>
 
       <container>
@@ -256,7 +256,7 @@
       </container>
     </section>
 
-    <section data-name="grid-item">
+    <section data-name="GridItem">
       <h2>GridItem</h2>
 
       <container>
@@ -321,7 +321,7 @@
     </section>
 
     <section data-name="Responsive Design">
-      <h2>Responsive Design (compact mode &lt; 415px)</h2>
+      <h2>Responsive Design (compact &lt; 415px)</h2>
 
       <container>
         <grid :rwd="{compact: 'reverse'}">
@@ -345,6 +345,26 @@
 
           <grid-item size="3/4">
             3/4
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item size="1/2" :rwd="{compact: '1/1'}">
+            1/2, compact: 1/1
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item size="1/2" :rwd="{compact: '0/1'}">
+            1/2, compact: 0/1
           </grid-item>
         </grid>
       </container>

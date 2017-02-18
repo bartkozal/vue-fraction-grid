@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import Container from 'components/Container'
-
-const config = {
-  container: '1020px',
-  gutter: '24px'
-}
+import { config } from '../helpers'
 
 test('styleObject', () => {
   const vm = new Vue({

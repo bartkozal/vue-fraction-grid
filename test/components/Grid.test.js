@@ -1,14 +1,7 @@
 import Vue from 'vue'
 import Grid from 'components/Grid'
 import GridItem from 'components/GridItem'
-
-const config = {
-  gutter: '24px',
-  approach: 'mobile',
-  breakpoints: {
-    compact: '320px 414px'
-  }
-}
+import { mockMatchMedia, config } from '../helpers'
 
 const getGrid = ({ horizontal, vertical, direction, rwd }) => {
   return new Vue({
@@ -96,16 +89,8 @@ test('pair prop', () => {
 
 
 describe('rwd prop', () => {
-  const mockMatchMediaWith = (matches) => {
-    const addListener = jest.fn()
-    window.matchMedia = () => {
-      return { matches, addListener }
-    }
-    return addListener
-  }
-
   test('override grid direction when prop exists and media matches', () => {
-    const listener = mockMatchMediaWith(true)
+    const listener = mockMatchMedia(true)
     const grid = getGrid({ direction: 'reverse', rwd: { compact: 'stack' }})
 
     expect(grid.gridDirection).toEqual('column')
@@ -113,7 +98,7 @@ describe('rwd prop', () => {
   })
 
   test('dont override grid direction when prop exists and media doesnt matches', () => {
-    const listener = mockMatchMediaWith(false)
+    const listener = mockMatchMedia(false)
     const grid = getGrid({ rwd: { compact: 'stack-reverse' }})
 
     expect(grid.gridDirection).toEqual('row')
@@ -121,9 +106,10 @@ describe('rwd prop', () => {
   })
 
   test('dont override grid direction when prop doesnt exists', () => {
-    const listener = mockMatchMediaWith(true)
+    const listener = mockMatchMedia(true)
+    const grid = getGrid({ horizontal: 'left' })
 
-    expect(getGrid({ horizontal: 'left' }).gridDirection).toEqual('row')
+    expect(grid.gridDirection).toEqual('row')
     expect(listener).toHaveBeenCalledTimes(0)
   })
 })

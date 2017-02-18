@@ -7,13 +7,12 @@
 <script>
 import reduceCSSCalc from 'reduce-css-calc'
 import isUndefined from 'lodash.isundefined'
-import forEach from 'lodash.foreach'
 import initConfig from '../utils/init-config'
-import mediaQueryString from '../utils/media-query-string'
+import initRWD from '../utils/init-rwd'
 
 export default {
   name: 'grid',
-  mixins: [initConfig],
+  mixins: [initConfig, initRWD],
   props: {
     horizontal: String,
     vertical: String,
@@ -22,29 +21,21 @@ export default {
     direction: {
       type: String,
       default: 'row'
-    },
-    rwd: Object
+    }
   },
   created () {
-    if (!isUndefined(this.rwd)) {
-      forEach(this.rwd, (gridDirection, breakpoint) => {
-        const mediaQuery = window.matchMedia(mediaQueryString({
-          approach: this.config.approach,
-          query: this.config.breakpoints[breakpoint]
-        }))
-
-        if (mediaQuery.matches) {
+    this.bindMediaQueries((mediaQuery, gridDirection) => {
+      if (mediaQuery.matches) {
+        this.gridDirection = gridDirection
+      }
+      mediaQuery.addListener(listener => {
+        if (listener.matches) {
           this.gridDirection = gridDirection
+        } else {
+          this.gridDirection = this.direction
         }
-        mediaQuery.addListener(listener => {
-          if (listener.matches) {
-            this.gridDirection = gridDirection
-          } else {
-            this.gridDirection = this.direction
-          }
-        })
       })
-    }
+    })
   },
   data () {
     return {
