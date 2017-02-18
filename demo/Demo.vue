@@ -128,6 +128,62 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid vertical="top">
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid vertical="top">
+          <grid-item size="1/2" class="lg">
+            1/2
+          </grid-item>
+
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid vertical="middle">
+          <grid-item size="1/2" class="lg">
+            1/2
+          </grid-item>
+
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid vertical="bottom">
+          <grid-item size="1/2" class="lg">
+            1/2
+          </grid-item>
+
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>
@@ -149,5 +205,9 @@
   color: #fafafa;
   background-clip: content-box;
   background-color: #ff7e67;
+}
+
+.lg {
+  height: 4em;
 }
 </style>

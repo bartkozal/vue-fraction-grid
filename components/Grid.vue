@@ -12,14 +12,16 @@ export default {
   name: 'grid',
   mixins: [initConfig],
   props: {
-    horizontal: String
+    horizontal: String,
+    vertical: String
   },
   computed: {
     styleObject () {
       return {
         marginRight: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
         marginLeft: reduceCSSCalc(`calc(${this.config.gutter} / -2)`),
-        justifyContent: this.justifyContent
+        justifyContent: this.justifyContent,
+        alignItems: this.alignItems
       }
     },
     justifyContent () {
@@ -30,6 +32,13 @@ export default {
         between: 'space-between',
         around: 'space-around'
       }[this.horizontal]
+    },
+    alignItems () {
+      return {
+        top: 'flex-start',
+        middle: 'center',
+        bottom: 'flex-end'
+      }[this.vertical]
     }
   }
 }
