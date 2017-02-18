@@ -14,26 +14,49 @@ export default {
   mixins: [initConfig],
   props: {
     size: {
-      required: true,
       type: String,
       validator (value) {
         const fraction = value.split('/')
         const denominator = +fraction[1]
         return fraction.length === 2 && denominator !== 0
       }
-    }
+    },
+    grow: [String, Number],
+    shrink: [String, Number]
   },
   computed: {
     isSizeZero () {
       return this.size === '0/1'
     },
     styleObject () {
-      return {
+      const stylePadding = {
         paddingRight: this.horizontalPadding,
-        paddingLeft: this.horizontalPadding,
-        flexBasis: this.percentageWidth,
-        maxWidth: this.percentageWidth
+        paddingLeft: this.horizontalPadding
       }
+      const isSize = !isUndefined(this.size) && isUndefined(this.grow) && isUndefined(this.shrink)
+      const isGrow = isUndefined(this.size) && !isUndefined(this.grow) && isUndefined(this.shrink)
+      const isShrink = isUndefined(this.size) && isUndefined(this.grow) && !isUndefined(this.shrink)
+
+      if (isSize) {
+        return Object.assign(stylePadding, {
+          flexBasis: this.percentageWidth,
+          maxWidth: this.percentageWidth
+        })
+      }
+
+      if (isGrow) {
+        return Object.assign(stylePadding, {
+          flexGrow: +this.grow,
+        })
+      }
+
+      if (isShrink) {
+        return Object.assign(stylePadding, {
+          flexShrink: +this.shrink,
+        })
+      }
+
+      return stylePadding
     },
     horizontalPadding () {
       const notFlatGridChild = isUndefined(this.$parent) || isUndefined(this.$parent.flat)

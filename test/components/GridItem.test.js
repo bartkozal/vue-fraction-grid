@@ -3,24 +3,32 @@ import GridItem from 'components/GridItem'
 
 const config = { gutter: '24px' }
 
-const getGridItem = ({ size }) => {
+const getGridItem = ({ size, grow, shrink }) => {
   return new Vue({
     extends: GridItem,
-    propsData: {
-      size: size
-    },
+    propsData: { size, grow, shrink },
     config
   }).$mount()
 }
 
 test('styleObject', () => {
-  const vm = getGridItem({ size: '1/2' })
-
-  expect(vm.styleObject).toEqual({
+  expect(getGridItem({ size: '1/2' }).styleObject).toEqual({
     paddingRight: '12px',
     paddingLeft: '12px',
     flexBasis: '50.0000%',
     maxWidth: '50.0000%'
+  })
+
+  expect(getGridItem({ grow: '2' }).styleObject).toEqual({
+    paddingRight: '12px',
+    paddingLeft: '12px',
+    flexGrow: 2
+  })
+
+  expect(getGridItem({ shrink: 0.5 }).styleObject).toEqual({
+    paddingRight: '12px',
+    paddingLeft: '12px',
+    flexShrink: 0.5
   })
 })
 

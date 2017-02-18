@@ -68,7 +68,7 @@ test('flat prop', () => {
     components: {
       GridItem
     },
-    render: h => h('div', [h('grid-item', { props: { size: '1/2' }})]),
+    render: h => h('div', [h('grid-item')]),
     config
   }).$mount()
 

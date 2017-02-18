@@ -290,6 +290,34 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item grow="2">
+            2
+          </grid-item>
+
+          <grid-item grow="1">
+            1
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid>
+          <grid-item shrink="1">
+            1
+          </grid-item>
+
+          <grid-item grow="1">
+            1
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>

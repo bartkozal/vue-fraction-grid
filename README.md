@@ -6,7 +6,7 @@
 
 - [x] container
 - [x] grid
-- [ ] grid-item
+- [x] grid-item
 - [x] settings
 - [ ] responsive design
 - [ ] demo
