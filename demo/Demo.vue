@@ -37,34 +37,37 @@
     <section data-name="grid">
       <h2>Grid</h2>
 
-      <grid>
-        <grid-item size="1/3">
-          1/3
-        </grid-item>
+      <container>
+        <grid>
+          <grid-item size="1/3">
+            1/3
+          </grid-item>
 
-        <grid-item size="2/3">
-          2/3
-        </grid-item>
-      </grid>
+          <grid-item size="2/3">
+            2/3
+          </grid-item>
+        </grid>
+      </container>
     </section>
   </div>
 </template>
 
 <style>
 .vfg-container {
-  background-color: #a2d5f2;
   text-align: center;
+  background-color: #a2d5f2;
 }
 
 .vfg-grid {
-  background-color: #07689f;
-  color: #fafafa;
   text-align: center;
+  color: #fafafa;
+  background-color: #07689f;
 }
 
 .vfg-grid-item {
-  background-color: #ff7e67;
-  color: #fafafa;
   text-align: center;
+  color: #fafafa;
+  background-clip: content-box;
+  background-color: #ff7e67;
 }
 </style>
