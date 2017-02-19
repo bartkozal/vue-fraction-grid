@@ -248,7 +248,7 @@ Set the grid items direction. This works simillar to `flex-direction` attribute.
 Mix props however you want to.
 
 ```html
-<grid horizontal="right" verical="bottom" direction="reverse" pair>
+<grid horizontal="right" vertical="bottom" direction="reverse" pair>
   ...
 </grid>
 ```
@@ -262,16 +262,10 @@ Syntax:
            [:rwd="{ breakpointName: size }"]>
 ```
 
-Use any size written in the fraction format. Grid item should be nested directly in the grid. Fractions of items don't have to sum to 1. **Denominator can't be equal 0!**
+Use any size written in the fraction format. Grid item should be nested directly in the grid. Items fractions don't have to sum to 1. **Denominator can't be equal 0!**
 
 ```html
-<grid-item size="5/8">
-  ...
-</grid-item>
-```
-
-```html
-<grid-item size="1/10">
+<grid-item size="123/546">
   ...
 </grid-item>
 ```

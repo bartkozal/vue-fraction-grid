@@ -254,6 +254,19 @@
           </grid-item>
         </grid>
       </container>
+
+      <hr>
+
+      <container>
+        <grid horizontal="right" vertical="bottom" direction="reverse" pair>
+          <grid-item size="1/6" class="lg">
+            1/6
+          </grid-item>
+          <grid-item size="1/2">
+            1/2
+          </grid-item>
+        </grid>
+      </container>
     </section>
 
     <section>
@@ -392,6 +405,6 @@
 }
 
 .lg {
-  height: 4em;
+  line-height: 3;
 }
 </style>

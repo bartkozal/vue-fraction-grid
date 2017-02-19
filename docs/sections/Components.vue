@@ -263,6 +263,76 @@
     </code-example>
 
     <h3 id="grid-item">Grid Item</h3>
+
+    <p>Syntax:</p>
+    <code-example syntax="html" :source="exampleGridItemSyntax"></code-example>
+
+    <p>
+      Use any size written in the fraction format. Grid item should be nested directly in the grid. Items fractions don't have to sum to 1. <strong>Denominator can't be equal 0!</strong>
+    </p>
+    <code-example syntax="html" :source="exampleGridItemDefault">
+      <container>
+        <grid>
+          <grid-item size="123/456">
+            123/456
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+
+    <p>
+      Fill the grid with a grid item by setting its size to <code>1/1</code>:
+    </p>
+    <code-example syntax="html" :source="exampleGridItemFill">
+      <container>
+        <grid>
+          <grid-item size="1/1">
+            1/1
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+
+    <p>
+      Hide the grid item by setting its size to <code>0/1</code>:
+    </p>
+    <code-example syntax="html" :source="exampleGridItemHide">
+      <container>
+        <grid>
+          <grid-item size="0/1">
+            0/1
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+
+    <p>
+      Use <code>grow</code> and <code>shrink</code> props instead of <code>size</code>. They work simillar to <code>flex-grow</code> and <code>flex-shrink</code> attributes. <strong>Never mix size, grow and shrink into a single item!</strong>
+    </p>
+    <code-example syntax="html" :source="exampleGridItemGrow">
+      <container>
+        <grid>
+          <grid-item grow="2">
+            grow 2x
+          </grid-item>
+          <grid-item grow="1">
+            grow 1x
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+    <code-example syntax="html" :source="exampleGridItemShrink">
+      <container>
+        <grid>
+          <grid-item grow="1">
+            grow
+          </grid-item>
+          <grid-item shrink="1">
+            shrink
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
   </section>
 </template>
 
@@ -417,7 +487,46 @@ export default {
         <grid horizontal="right" vertical="bottom" direction="reverse" pair>
           ...
         </grid>
-      `
+      `,
+      exampleGridItemSyntax: html`
+        <grid-item size="<number>/<number>"|grow="<number>"|shrink="<number>"
+                   [:rwd="{ breakpointName: size }"]>
+      `,
+      exampleGridItemDefault: html`
+        <grid-item size="123/546">
+          ...
+        </grid-item>
+      `,
+      exampleGridItemFill: html`
+        <grid-item size="1/1">
+          ...
+        </grid-item>
+      `,
+      exampleGridItemHide: html`
+        <grid-item size="0/1">
+          ...
+        </grid-item>
+      `,
+      exampleGridItemGrow: html`
+        <grid>
+          <grid-item grow="2">
+            ...
+          </grid-item>
+          <grid-item grow="1">
+            ...
+          </grid-item>
+        </grid>
+      `,
+      exampleGridItemShrink: html`
+        <grid>
+          <grid-item grow="1">
+            ...
+          </grid-item>
+          <grid-item shrink="1">
+            ...
+          </grid-item>
+        </grid>
+      `,
     }
   }
 }
