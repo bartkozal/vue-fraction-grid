@@ -102,6 +102,12 @@ Override container's maximum width with `width` prop. This is useful when you ne
 </container>
 ```
 
+```html
+<container width="25vw">
+  ...
+</container>
+```
+
 ### Grid
 
 Syntax:

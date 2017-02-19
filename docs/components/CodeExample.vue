@@ -48,6 +48,7 @@ export default {
   line-height: var(--font-leading);
 }
 
+.code-example-demo .vfg-container,
 .code-example-demo .vfg-grid-item {
   background-color: var(--color-complementary);
   background-clip: content-box;
@@ -55,5 +56,11 @@ export default {
   text-align: center;
   color: white;
   line-height: 2;
+}
+
+.code-example-demo .vfg-container {
+  background-clip: border-box;
+  background-color: #ffecef; /* rgba(var(--color-complementary), .1) */
+  color: var(--color-text);
 }
 </style>
