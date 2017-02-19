@@ -90,4 +90,21 @@ code:not(.hljs) {
 ol > li + li {
   margin-top: var(--spacing-unit);
 }
+
+dt {
+  float: left;
+}
+
+dd {
+  padding-bottom: var(--spacing-unit);
+  margin-bottom: var(--spacing-unit);
+  padding-left: 140px;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+dl dd:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
 </style>

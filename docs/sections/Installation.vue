@@ -1,15 +1,19 @@
 <template>
   <section>
-    <h2>Installation</h2>
+    <h2 id="installation">Installation</h2>
     <ol>
       <li>
-        <p>Install package using <code>yarn</code> or <code>npm</code>:</p>
+        <p>
+          Install package using <code>yarn</code> or <code>npm</code>:
+        </p>
         <code-example syntax="bash" :source="exampleInstall"></code-example>
       </li>
 
       <li>
-        <p>Load the plugin by calling <code>Vue.use()</code>:</p>
-        <code-example syntax="bash" :source="exampleLoad"></code-example>
+        <p>
+          Load the plugin by calling <code>Vue.use()</code>:
+        </p>
+        <code-example syntax="js" :source="exampleLoad"></code-example>
       </li>
 
       <li>

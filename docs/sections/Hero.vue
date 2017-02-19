@@ -4,7 +4,9 @@
       vue-fraction-grid
     </h1>
     <p class="hero-author">
-      <small>Created and maintained by <a href="https://twitter.com/_bkzl">@_bkzl</a></small>
+      <small>
+        Created and maintained by <a href="https://twitter.com/_bkzl">@_bkzl</a>
+      </small>
     </p>
     <p class="hero-tagline">
       Flexbox based responsive fraction grid system for Vue.js
