@@ -76,7 +76,7 @@ breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` p
               with a space.
 ```
 
-## API
+## Components
 
 ### Container
 
@@ -292,7 +292,7 @@ Use `grow` and `shrink` props instead of `size`. They work simillar to `flex-gro
 </grid-item>
 ```
 
-### Responsive Design
+## Responsive Design
 
 Responsive design is based on two options from settings: `approach` and `breakpoints`.
 
@@ -319,7 +319,7 @@ Is translated to this declaration from CSS:
 @media (min-width: 415px) and (max-width: 1100px) { ... } /* tablet */
 ```
 
-### Responsive Design API
+### API
 
 Change the direction of a grid for specific breakpoints.
 
