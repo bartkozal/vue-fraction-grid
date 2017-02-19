@@ -117,7 +117,7 @@ Syntax:
       pair]>
 ```
 
-The most common used and simple example of the grid:
+The most common usage and simple example of the grid:
 
 ```html
 <grid>
@@ -131,7 +131,7 @@ The most common used and simple example of the grid:
 </grid>
 ```
 
-Nest grids however you want to, the gutter is always the same. There is no need to wrap nested grids with containers.
+Nest grids however you like, the gutter is always the same. There is no need to wrap nested grids with containers.
 
 ```html
 <grid>
@@ -250,7 +250,7 @@ Syntax:
            [:rwd="{ breakpointName: size }"]>
 ```
 
-Use any size in the fraction format. Grid item should be nested directly in the grid. Fractions of items don't have to sum to 1. **Denominator can't be equal 0!**
+Use any size written in the fraction format. Grid item should be nested directly in the grid. Fractions of items don't have to sum to 1. **Denominator can't be equal 0!**
 
 ```html
 <grid-item size="5/8">
@@ -298,7 +298,7 @@ Use `grow` and `shrink` props instead of `size`. They work simillar to `flex-gro
 
 Responsive design is based on two options from settings: `approach` and `breakpoints`.
 
-If you set approach to `mobile-first` breakpoints with a single value will respond to media queries using `min-width` attribute. If you use `desktop-first` instead, breakpoints will respond to `max-width` attribute.
+If you set approach to `mobile-first` breakpoints with a single value will respond to media queries using `min-width` attribute. If you use `desktop-first` instead, breakpoints will respond to `max-width`.
 
 Breakpoints with two values respond to `(min-width: <length>) and (max-width: <length>)` query.
 
@@ -358,7 +358,8 @@ Change size of a grid item for specific breakpoints.
 2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
 
     ```
-    demo - Start demo page at localhost:4000 with examples for every API
+    demo - Start demo page at localhost:4000 with working implementation of all examples
+    docs - Start docs at localhost:8080
     test - Run tests using Jest
     lint - Lint JS and CSS code of components, utils and installation
     ```
