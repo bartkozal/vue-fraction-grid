@@ -76,8 +76,6 @@ breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` p
               with a space.
 ```
 
-Detailed explanation and more examples are in [the full documentation](https://bkzl.github.io/vue-fraction-grid).
-
 ## API
 
 ### Container
@@ -320,8 +318,6 @@ Is translated to this declaration from CSS:
 @media (max-width: 414px) { ... } /* compact */
 @media (min-width: 415px) and (max-width: 1100px) { ... } /* tablet */
 ```
-
-See more examples [in docs](https://bkzl.github.io/vue-fraction-grid).
 
 ### Responsive Design API
 
