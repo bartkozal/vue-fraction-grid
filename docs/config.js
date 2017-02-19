@@ -8,5 +8,11 @@ module.exports = {
     output: {
       publicPath: './'
     }
+  },
+  postcss: {
+    plugins: [
+      require('postcss-import')(),
+      require('postcss-cssnext')(),
+    ]
   }
 }
