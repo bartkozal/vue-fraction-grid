@@ -69,7 +69,7 @@ container   - Default containers width. Works with any valid CSS values like: '1
               '52em', '100vw' etc. Set it to '100%' to use full-width fluid grid. Because
               this is the maximum value, the grid will scale nicely for smaller viewports.
 gutter      - Gutter width. Works with any valid CSS values like '30px', '1rem' etc.
-approach    - 'mobil-first' or 'desktop-first'. Choose which approach of responsive web design
+approach    - 'mobile-first' or 'desktop-first'. Choose which approach of responsive web design
               do you prefer. Breakpoint rules are based on this option.
 breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` prop.
               Value is the size and can include one or two CSS values separated
