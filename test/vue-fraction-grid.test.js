@@ -12,7 +12,7 @@ test('overriding default configuration', () => {
   const options = {
     container: '960px',
     gutter: '1em',
-    approach: 'desktop'
+    approach: 'desktop-first'
   }
 
   VueFractionGrid.install(Vue, options)
