@@ -32,15 +32,15 @@ export default {
 @import '../variables.css';
 
 .code-example {
+  margin-bottom: var(--spacing-unit);
   background-color: white;
   border: 2px solid var(--color-secondary);
   border-radius: 4px;
-  margin-bottom: var(--spacing-unit);
 }
 
 .code-example-demo {
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   border-bottom: 2px solid var(--color-secondary);
 }
 
@@ -50,12 +50,12 @@ export default {
 
 .code-example-demo .vfg-container,
 .code-example-demo .vfg-grid-item {
+  font-family: var(--font-stack-monospace);
+  line-height: 2;
+  color: white;
+  text-align: center;
   background-color: var(--color-complementary);
   background-clip: content-box;
-  font-family: var(--font-stack-monospace);
-  text-align: center;
-  color: white;
-  line-height: 2;
 }
 
 .code-example-demo .vfg-grid-item.large {
@@ -63,9 +63,9 @@ export default {
 }
 
 .code-example-demo .vfg-container {
-  background-clip: border-box;
-  background-color: color(var(--color-complementary) alpha(.1));
   color: var(--color-text);
+  background-color: color(var(--color-complementary) alpha(0.1));
+  background-clip: border-box;
 }
 
 .code-example-demo .vfg-grid-item .vfg-grid-item {

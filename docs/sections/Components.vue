@@ -526,7 +526,7 @@ export default {
             ...
           </grid-item>
         </grid>
-      `,
+      `
     }
   }
 }

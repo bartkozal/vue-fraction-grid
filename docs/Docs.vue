@@ -41,8 +41,8 @@ export default {
 @import 'variables.css';
 
 h1 {
-  color: var(--color-primary);
   font-family: var(--font-stack-serif);
+  color: var(--color-primary);
 }
 
 h2 {
@@ -59,8 +59,8 @@ body {
   margin-top: calc(var(--spacing-headings) * 2);
   margin-bottom: calc(var(--spacing-headings) * 2);
   font-family: var(--font-stack-sans-serif);
-  background-color: var(--color-body);
   color: var(--color-text);
+  background-color: var(--color-body);
 }
 
 a {
@@ -81,11 +81,11 @@ code {
 }
 
 code:not(.hljs) {
-  padding-left: .5em;
-  padding-right: .5em;
-  border-radius: 4px;
-  background-color: white;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
   white-space: normal;
+  background-color: white;
+  border-radius: 4px;
 }
 
 ol {
@@ -106,8 +106,8 @@ dt {
 
 dd {
   padding-bottom: var(--spacing-unit);
-  margin-bottom: var(--spacing-unit);
   padding-left: 130px;
+  margin-bottom: var(--spacing-unit);
   border-bottom: 2px solid var(--color-secondary);
 }
 
@@ -119,9 +119,9 @@ dl dd:last-child {
 
 hr {
   height: 2px;
-  border: 0 none;
-  background-color: var(--color-secondary);
-  color: var(--color-secondary);
   margin-top: calc(var(--spacing-unit) * 3);
+  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  border: 0;
 }
 </style>
