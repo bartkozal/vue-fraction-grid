@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <section data-name="vue-fraction-grid">
+  <article>
+    <section>
       <h1>vue-fraction-grid</h1>
 
       <container>
@@ -20,7 +20,7 @@
       </container>
     </section>
 
-    <section data-name="Container">
+    <section>
       <h2>Container</h2>
 
       <container>
@@ -34,7 +34,7 @@
       </container>
     </section>
 
-    <section data-name="Grid">
+    <section>
       <h2>Grid</h2>
 
       <container>
@@ -256,7 +256,7 @@
       </container>
     </section>
 
-    <section data-name="GridItem">
+    <section>
       <h2>GridItem</h2>
 
       <container>
@@ -320,7 +320,7 @@
       </container>
     </section>
 
-    <section data-name="Responsive Design">
+    <section>
       <h2>Responsive Design (compact &lt; 415px)</h2>
 
       <container>
@@ -369,7 +369,7 @@
         </grid>
       </container>
     </section>
-  </div>
+  </article>
 </template>
 
 <style>
