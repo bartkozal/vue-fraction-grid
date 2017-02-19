@@ -334,7 +334,7 @@
     </section>
 
     <section>
-      <h2>Responsive Design (compact &lt; 415px)</h2>
+      <h2>Responsive Design (compact: &lt;415px, tablet: &gt;416px, &lt;1100px)</h2>
 
       <container>
         <grid :rwd="{compact: 'reverse'}">
@@ -378,6 +378,22 @@
         <grid>
           <grid-item size="1/2" :rwd="{compact: '0/1'}">
             1/2, compact: 0/1
+          </grid-item>
+        </grid>
+      </container>
+
+      <hr>
+
+      <container>
+        <grid :rwd="{compact: 'stack'}">
+          <grid-item size="1/6" :rwd="{tablet: '0/1', compact: '1/1'}">
+            1/6 -> 0/1 -> 1/1
+          </grid-item>
+          <grid-item size="1/2" :rwd="{tablet: '1/2', compact: '0/1'}">
+            1/2 -> 1/2 -> 0/1
+          </grid-item>
+          <grid-item size="1/3" :rwd="{tablet: '1/2', compact: '1/1'}">
+            1/3 -> 1/2 -> 1/1
           </grid-item>
         </grid>
       </container>

@@ -85,6 +85,7 @@ code:not(.hljs) {
   padding-right: .5em;
   border-radius: 4px;
   background-color: white;
+  white-space: normal;
 }
 
 ol > li + li {

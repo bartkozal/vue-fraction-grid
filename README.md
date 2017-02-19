@@ -265,7 +265,7 @@ Syntax:
 Use any size written in the fraction format. Grid item should be nested directly in the grid. Items fractions don't have to sum to 1. **Denominator can't be equal 0!**
 
 ```html
-<grid-item size="123/546">
+<grid-item size="123/456">
   ...
 </grid-item>
 ```
@@ -314,8 +314,8 @@ Following configuration:
 Vue.use(VueFractionGrid, {
   approach: 'desktop-first',
   breakpoints: {
-    compact: '414px',
-    tablet: '415px 1100px'
+    compact: '415px',
+    tablet: '416px 1100px'
   }
 })
 ```
@@ -323,8 +323,8 @@ Vue.use(VueFractionGrid, {
 Is translated to this declaration from CSS:
 
 ```css
-@media (max-width: 414px) { ... } /* compact */
-@media (min-width: 415px) and (max-width: 1100px) { ... } /* tablet */
+@media (max-width: 415px) { ... } /* compact */
+@media (min-width: 416px) and (max-width: 1100px) { ... } /* tablet */
 ```
 
 ### API
@@ -349,6 +349,22 @@ Change size of a grid item for specific breakpoints.
 <grid-item size="3/4" :rwd="{compact: '0/1'}">
   ...
 </grid-item>
+```
+
+Mix responsive design props for grid and items.
+
+```html
+<grid :rwd="{compact: 'stack'}">
+  <grid-item size="1/6" :rwd="{tablet: '0/1', compact: '1/1'}">
+    ...
+  </grid-item>
+  <grid-item size="1/2" :rwd="{tablet: '1/2', compact: '0/1'}">
+    ...
+  </grid-item>
+  <grid-item size="1/3" :rwd="{tablet: '1/2', compact: '1/1'}">
+    ...
+  </grid-item>
+</grid>
 ```
 
 ## Development
