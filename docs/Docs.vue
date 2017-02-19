@@ -88,8 +88,16 @@ code:not(.hljs) {
   white-space: normal;
 }
 
+ol {
+  margin-bottom: var(--spacing-unit);
+}
+
 ol > li + li {
   margin-top: var(--spacing-unit);
+}
+
+dl {
+  clear: both;
 }
 
 dt {
@@ -99,7 +107,7 @@ dt {
 dd {
   padding-bottom: var(--spacing-unit);
   margin-bottom: var(--spacing-unit);
-  padding-left: 140px;
+  padding-left: 130px;
   border-bottom: 2px solid var(--color-secondary);
 }
 
@@ -107,5 +115,13 @@ dl dd:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
   border-bottom: 0;
+}
+
+hr {
+  height: 2px;
+  border: 0 none;
+  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  margin-top: calc(var(--spacing-unit) * 3);
 }
 </style>

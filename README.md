@@ -372,7 +372,7 @@ Mix responsive design props for grid and items.
 1. Clone the repository:
 
     ```sh
-    git clone git@github.com:bkzl/vue-fraction-grid.git
+    $ git clone git@github.com:bkzl/vue-fraction-grid.git
     ```
 
 2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
@@ -381,7 +381,7 @@ Mix responsive design props for grid and items.
     demo   - Start demo page with implementation of all examples
     test   - Run tests using Jest
     lint   - Lint JS and CSS code of components, utils and installation
-    docs   - Start docs
+    docs   - Start docs locally
     deploy - Deploy docs to GitHub Pages
     ```
 
