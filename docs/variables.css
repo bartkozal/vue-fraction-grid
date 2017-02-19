@@ -1,4 +1,7 @@
 :root {
+  --font-stack-sans-serif: 'Open Sans', sans-serif;
+  --font-stack-serif: 'Muli', serif;
+  --font-stack-monospace: 'Roboto Mono', monospace;
   --font-base: 1em;
   --font-ratio: 1.333;
   --font-leading: 1.45;
@@ -8,4 +11,7 @@
   --color-secondary: #a3de83;
   --color-body: #feffe4;
   --color-complementary: #fa4659;
+  --color-link: #0074d9;
+  --color-muted: #aaa;
+  --color-text: #4d4d4c;
 }

@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "common-tags": "^1.4.0",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-html": "^2.0.1",
@@ -61,7 +62,8 @@
     "stylelint-config-recess-order": "^1.0.0",
     "stylelint-config-standard": "^16.0.0",
     "stylelint-processor-html": "^1.0.0",
-    "vue-cli": "^2.8.1"
+    "vue-cli": "^2.8.1",
+    "vue-highlightjs": "^1.1.0"
   },
   "dependencies": {
     "lodash.foreach": "^4.5.0",

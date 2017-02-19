@@ -2,20 +2,20 @@
   <div>
     <github-corner></github-corner>
     <container>
-      <header class="hero-header">
-        <h1>vue-fraction-grid</h1>
-      </header>
+      <hero></hero>
     </container>
   </div>
 </template>
 
 <script>
 import GitHubCorner from './components/GitHubCorner'
+import Hero from './components/Hero'
 
 export default {
   name: 'docs',
   components: {
-    'github-corner': GitHubCorner
+    'github-corner': GitHubCorner,
+    Hero
   }
 }
 </script>
@@ -25,16 +25,30 @@ export default {
 @import 'variables.css';
 
 h1 {
+  font-family: var(--font-stack-serif);
   color: var(--color-primary);
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: var(--font-stack-sans-serif);
   background-color: var(--color-body);
+  color: var(--color-text);
 }
 
-.hero-header {
-  margin-top: calc(var(--spacing-headings) * 2);
-  text-align: center;
+a {
+  color: var(--color-complementary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+code {
+  font-family: var(--font-stack-monospace);
 }
 </style>
