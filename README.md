@@ -60,21 +60,23 @@ Vue.use(VueFractionGrid, {
 })
 ```
 
-Configure grid by passing options as a second argument of `Vue.use()`. Your configuration is merged to defaults that are listed above. Available settings:
+Configure grid by passing options as a second argument of `Vue.use()`. Configuration is merged to defaults that are listed above.
+
+Available settings:
 
 ```
-container   - Maximum width of container. Works with any valid CSS values like: '1440px',
-              '52em', '100vw' etc. Set it to '100%' if you need full-width fluid grid. Because
+container   - Default containers width. Works with any valid CSS values like: '1440px',
+              '52em', '100vw' etc. Set it to '100%' to use full-width fluid grid. Because
               this is the maximum value, the grid will scale nicely for smaller viewports.
 gutter      - Gutter width, works with any valid CSS values like '30px', '1rem' etc.
 approach    - 'mobil-first' or 'desktop-first'. Choose which approach of responsive web design
               do you prefer. Breakpoint rules are based on this option.
-breakpoints - List the grid breakpoints. Key is the name of the breakpoint
-              used in the `:rwd` prop. Value is the size and can include
-              one or two CSS length values separated with space.
+breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` prop.
+              Value is the size and can include one or two CSS values separated
+              with a space.
 ```
 
-Detailed explanation and more configuration examples are in [the full documentation](https://bkzl.github.io/vue-fraction-grid).
+Detailed explanation and more examples are in [the full documentation](https://bkzl.github.io/vue-fraction-grid).
 
 ## API
 
@@ -86,7 +88,7 @@ Syntax:
 <container [width="<length>|<percentage>"]>
 ```
 
-Center content of site in the container:
+Center content of the site in the container:
 
 ```html
 <container>
@@ -94,7 +96,7 @@ Center content of site in the container:
 </container>
 ```
 
-Override container's maximum width with `width` prop. It's especially useful when you need to use more than one type of container e.g. regular and full-width.
+Override container's maximum width with `width` prop. This is useful when you need more than one container's type e.g. regular and full-width.
 
 ```html
 <container width="100%">
@@ -115,7 +117,7 @@ Syntax:
       pair]>
 ```
 
-The most common used and simple example of a grid:
+The most common used and simple example of the grid:
 
 ```html
 <grid>
@@ -129,7 +131,7 @@ The most common used and simple example of a grid:
 </grid>
 ```
 
-Nest grids however you want to, the gutter is always the same. You don't need to wrap nested grids with containers.
+Nest grids however you want to, the gutter is always the same. There is no need to wrap nested grids with containers.
 
 ```html
 <grid>
@@ -151,7 +153,7 @@ Nest grids however you want to, the gutter is always the same. You don't need to
 </grid>
 ```
 
-Horizontal alignment of grid items. This is mapped to flexbox `justify-content` attribute.
+Horizontal alignment of grid items. This works simillar to `justify-content` attribute.
 
 ```html
 <grid horizontal="left">
@@ -183,7 +185,7 @@ Horizontal alignment of grid items. This is mapped to flexbox `justify-content` 
 </grid>
 ```
 
-Vertical alignment of grid items. This is mapped to flexbox `align-items` attribute.
+Vertical alignment of grid items. This works simillar to `align-items` attribute.
 
 ```html
 <grid vertical="top">
@@ -219,7 +221,7 @@ Align content of the first item to the left and content of the second item to th
 </grid>
 ```
 
-The direction of grid items. This is mapped to flexbox `flex-direction` attribute.
+Set the grid items direction. This works simillar to `flex-direction` attribute.
 
 ```html
 <grid direction="reverse">
@@ -248,7 +250,7 @@ Syntax:
            [:rwd="{ breakpointName: size }"]>
 ```
 
-Provide any size you want to in the fraction format. Grid item should be nested directly in the grid. **Denominator can't be equal 0!**
+Use any size in the fraction format. Grid item should be nested directly in the grid. Fractions of items don't have to sum to 1. **Denominator can't be equal 0!**
 
 ```html
 <grid-item size="5/8">
@@ -256,7 +258,13 @@ Provide any size you want to in the fraction format. Grid item should be nested 
 </grid-item>
 ```
 
-To fill the grid with the grid item just set its size to `1/1`. It's useful in responsive design when you nedd to stack items.
+```html
+<grid-item size="1/10">
+  ...
+</grid-item>
+```
+
+Fill the grid with a grid item by setting its size to `1/1`:
 
 ```html
 <grid-item size="1/1">
@@ -264,7 +272,7 @@ To fill the grid with the grid item just set its size to `1/1`. It's useful in r
 </grid-item>
 ```
 
-Hide the grid item by setting its size to `0/1`. Another useful option for responsive design.
+Hide the grid item by setting its size to `0/1`:
 
 ```html
 <grid-item size="0/1">
@@ -272,7 +280,7 @@ Hide the grid item by setting its size to `0/1`. Another useful option for respo
 </grid-item>
 ```
 
-Use `grow` and `shrink` props instead of `size`. They are mapped to `flex-grow` and `flex-shrink` attributes. **Never mix size, grow and shrink into a single item!**
+Use `grow` and `shrink` props instead of `size`. They work simillar to `flex-grow` and `flex-shrink` attributes. **Never mix size, grow and shrink into a single item!**
 
 ```html
 <grid-item grow="2">
@@ -288,7 +296,13 @@ Use `grow` and `shrink` props instead of `size`. They are mapped to `flex-grow` 
 
 ### Responsive Design
 
-Responsive design is based on two options from settings: `approach` and `breakpoints`. If you set approach to `mobile-first` breakpoints with a single value will respond to media queries using `min-width` attribute. If you use `desktop-first` instead, breakpoints will have `max-width` attribute. Breakpoints with two values respond to `(min-width: <length>) and (max-width: <length>)` query. So the following configuration:
+Responsive design is based on two options from settings: `approach` and `breakpoints`.
+
+If you set approach to `mobile-first` breakpoints with a single value will respond to media queries using `min-width` attribute. If you use `desktop-first` instead, breakpoints will respond to `max-width` attribute.
+
+Breakpoints with two values respond to `(min-width: <length>) and (max-width: <length>)` query.
+
+Following configuration:
 
 ```js
 Vue.use(VueFractionGrid, {
@@ -300,7 +314,7 @@ Vue.use(VueFractionGrid, {
 })
 ```
 
-Is translated to this CSS declarations:
+Is translated to this declaration from CSS:
 
 ```css
 @media (max-width: 414px) { ... } /* compact */
@@ -311,7 +325,7 @@ See more examples [in docs](https://bkzl.github.io/vue-fraction-grid).
 
 ### Responsive Design API
 
-Change the grid direction for specific breakpoints.
+Change the direction of a grid for specific breakpoints.
 
 ```html
 <grid :rwd="{compact: 'reverse'}">
@@ -325,7 +339,7 @@ Change the grid direction for specific breakpoints.
 </grid>
 ```
 
-Change the grid item size for specific breakpoints.
+Change size of a grid item for specific breakpoints.
 
 ```html
 <grid-item size="3/4" :rwd="{compact: '0/1'}">
@@ -341,7 +355,7 @@ Change the grid item size for specific breakpoints.
     git clone git@github.com:bkzl/vue-fraction-grid.git
     ```
 
-2. Run scripts from package.json using `yarn run` in the main directory:
+2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
 
     ```
     demo - Start demo page at localhost:4000 with all API examples from README
