@@ -358,10 +358,11 @@ Change size of a grid item for specific breakpoints.
 2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
 
     ```
-    demo - Start demo page at localhost:4000 with working implementation of all examples
-    docs - Start docs at localhost:8080
-    test - Run tests using Jest
-    lint - Lint JS and CSS code of components, utils and installation
+    demo   - Start demo page with implementation of all examples
+    test   - Run tests using Jest
+    lint   - Lint JS and CSS code of components, utils and installation
+    docs   - Start docs
+    deploy - Deploy docs to GitHub Pages
     ```
 
 * * *
