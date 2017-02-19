@@ -9,10 +9,9 @@ module.exports = {
       publicPath: './'
     }
   },
-  postcss: {
-    plugins: [
-      require('postcss-import')(),
-      require('postcss-cssnext')(),
-    ]
-  }
+  postcss: [
+    require('postcss-import')(),
+    require('postcss-color-function')(),
+    require('postcss-cssnext')()
+  ]
 }

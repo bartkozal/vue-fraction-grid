@@ -245,6 +245,14 @@ Set the grid items direction. This works simillar to `flex-direction` attribute.
 </grid>
 ```
 
+Mix props however you want to.
+
+```html
+<grid horizontal="right" verical="bottom" direction="reverse" pair>
+  ...
+</grid>
+```
+
 ### Grid Item
 
 Syntax:

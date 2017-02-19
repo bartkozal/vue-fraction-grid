@@ -4673,6 +4673,15 @@ postcss-color-function@^2.0.0:
     postcss-message-helpers "^2.0.0"
     postcss-value-parser "^3.3.0"
 
+postcss-color-function@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-color-function/-/postcss-color-function-3.0.0.tgz#3c6fb60c6ff2240e541d49f2926edcad8700f3a6"
+  dependencies:
+    css-color-function "^1.2.0"
+    postcss "^5.0.4"
+    postcss-message-helpers "^2.0.0"
+    postcss-value-parser "^3.3.0"
+
 postcss-color-gray@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/postcss-color-gray/-/postcss-color-gray-3.0.1.tgz#74432ede66dd83b1d1363565c68b376e18ff6770"

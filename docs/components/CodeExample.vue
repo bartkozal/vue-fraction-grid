@@ -58,9 +58,25 @@ export default {
   line-height: 2;
 }
 
+.code-example-demo .vfg-grid-item.large {
+  line-height: 6;
+}
+
 .code-example-demo .vfg-container {
   background-clip: border-box;
-  background-color: #ffecef; /* rgba(var(--color-complementary), .1) */
+  background-color: color(var(--color-complementary) alpha(.1));
   color: var(--color-text);
+}
+
+.code-example-demo .vfg-grid-item .vfg-grid-item {
+  background-color: color(var(--color-complementary) lightness(-40%));
+}
+
+.code-example-demo .vfg-grid-pair > .vfg-grid-item {
+  text-align: left;
+}
+
+.code-example-demo .vfg-grid-pair > .vfg-grid-item + .vfg-grid-item {
+  text-align: right;
 }
 </style>
