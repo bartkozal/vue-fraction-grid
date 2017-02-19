@@ -3,5 +3,10 @@ module.exports = {
   port: 8080,
   html: {
     template: 'docs/index.html'
+  },
+  webpack: {
+    output: {
+      publicPath: './'
+    }
   }
 }
