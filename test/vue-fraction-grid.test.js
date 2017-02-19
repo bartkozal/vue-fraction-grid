@@ -2,13 +2,13 @@ import Vue from 'vue'
 import VueFractionGrid from 'vue-fraction-grid'
 import defaults from 'utils/defaults'
 
-test('default configuration', () => {
+test('configuration', () => {
   VueFractionGrid.install(Vue)
 
   expect(Vue.component('container').options.config).toEqual(defaults)
 })
 
-test('overriding default configuration', () => {
+test('override configuration', () => {
   const options = {
     container: '960px',
     gutter: '1em',

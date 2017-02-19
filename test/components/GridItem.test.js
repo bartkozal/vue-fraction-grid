@@ -32,7 +32,7 @@ test('styleObject', () => {
   })
 })
 
-test('size validation', () => {
+test('size validator', () => {
   console.error = jest.fn()
 
   getGridItem({ size: '1/0' })
@@ -42,7 +42,7 @@ test('size validation', () => {
   expect(console.error).toHaveBeenCalledTimes(3)
 })
 
-describe('rwd prop', () => {
+describe('rwd', () => {
   test('override grid item size when prop exists and media matches', () => {
     const listener = mockMatchMedia(true)
     const gridItem = getGridItem({ size: '1/2', rwd: { compact: '0/1' }})
@@ -52,7 +52,7 @@ describe('rwd prop', () => {
     expect(listener).toHaveBeenCalledTimes(1)
   })
 
-  test('dont override grid item size when prop exists and media doesnt matches', () => {
+  test('dont override grid item size when prop exists and media doesnt match', () => {
     const listener = mockMatchMedia(false)
     const gridItem = getGridItem({ size: '1/2', rwd: { compact: '1/1' }})
 
@@ -60,7 +60,7 @@ describe('rwd prop', () => {
     expect(listener).toHaveBeenCalledTimes(1)
   })
 
-  test('dont override grid item size when prop doesnt exists', () => {
+  test('dont override grid item size when prop doesnt exist', () => {
     const listener = mockMatchMedia(true)
     const gridItem = getGridItem({ size: '1/3' })
 

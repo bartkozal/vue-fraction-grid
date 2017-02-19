@@ -56,7 +56,7 @@ test('styleObject with horizontal and vertical props', () => {
   })
 })
 
-test('flat prop', () => {
+test('flat', () => {
   const vm = new Vue({
     extends: Grid,
     propsData: {
@@ -73,7 +73,7 @@ test('flat prop', () => {
   expect(vm.$children[0].horizontalPadding).toEqual(0)
 })
 
-test('pair prop', () => {
+test('pair', () => {
   const vm = new Vue({
     extends: Grid,
     propsData: {
@@ -88,7 +88,7 @@ test('pair prop', () => {
 })
 
 
-describe('rwd prop', () => {
+describe('rwd', () => {
   test('override grid direction when prop exists and media matches', () => {
     const listener = mockMatchMedia(true)
     const grid = getGrid({ direction: 'reverse', rwd: { compact: 'stack' }})
@@ -97,7 +97,7 @@ describe('rwd prop', () => {
     expect(listener).toHaveBeenCalledTimes(1)
   })
 
-  test('dont override grid direction when prop exists and media doesnt matches', () => {
+  test('dont override grid direction when prop exists and media doesnt match', () => {
     const listener = mockMatchMedia(false)
     const grid = getGrid({ rwd: { compact: 'stack-reverse' }})
 
@@ -105,7 +105,7 @@ describe('rwd prop', () => {
     expect(listener).toHaveBeenCalledTimes(1)
   })
 
-  test('dont override grid direction when prop doesnt exists', () => {
+  test('dont override grid direction when prop doesnt exist', () => {
     const listener = mockMatchMedia(true)
     const grid = getGrid({ horizontal: 'left' })
 

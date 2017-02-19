@@ -1,6 +1,6 @@
 import mediaQueryString from 'utils/media-query-string'
 
-test('return proper media query string on provided config', () => {
+test('return media query string for provided approach and query', () => {
   let mqs
 
   mqs = mediaQueryString({ approach: 'mobile-first', query: '320px 414px' })

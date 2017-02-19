@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import initConfig from 'utils/init-config'
 
-test('initConfig mixin', () => {
+test('initConfig', () => {
   const vm = new Vue({
     config: {foo: 'bar'},
     render: h => h(),
