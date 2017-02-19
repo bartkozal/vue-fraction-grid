@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import CodeExample from './CodeExample'
 import { html } from 'common-tags'
+import CodeExample from '../components/CodeExample'
 
 export default {
   name: 'hero',
