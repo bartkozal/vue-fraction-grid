@@ -68,7 +68,7 @@ Available settings:
 container   - Default containers width. Works with any valid CSS values like: '1440px',
               '52em', '100vw' etc. Set it to '100%' to use full-width fluid grid. Because
               this is the maximum value, the grid will scale nicely for smaller viewports.
-gutter      - Gutter width, works with any valid CSS values like '30px', '1rem' etc.
+gutter      - Gutter width. Works with any valid CSS values like '30px', '1rem' etc.
 approach    - 'mobil-first' or 'desktop-first'. Choose which approach of responsive web design
               do you prefer. Breakpoint rules are based on this option.
 breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` prop.
@@ -358,7 +358,7 @@ Change size of a grid item for specific breakpoints.
 2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
 
     ```
-    demo - Start demo page at localhost:4000 with all API examples from README
+    demo - Start demo page at localhost:4000 with examples for every API
     test - Run tests using Jest
     lint - Lint JS and CSS code of components, utils and installation
     ```
