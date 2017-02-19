@@ -1,5 +1,5 @@
 <template>
-  <header class="hero">
+  <header>
     <h1 class="hero-title">
       vue-fraction-grid
     </h1>
@@ -64,10 +64,6 @@ export default {
 
 <style>
 @import '../variables.css';
-
-.hero {
-  margin-top: calc(var(--spacing-headings) * 2);
-}
 
 .hero-title {
   margin-bottom: 0;

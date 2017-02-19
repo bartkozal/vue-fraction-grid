@@ -40,11 +40,23 @@ export default {
 @import 'variables.css';
 
 h1 {
-  font-family: var(--font-stack-serif);
   color: var(--color-primary);
+  font-family: var(--font-stack-serif);
+}
+
+h2 {
+  font-family: var(--font-stack-serif);
+  font-weight: normal;
+}
+
+h3 {
+  font-family: var(--font-stack-serif);
+  font-weight: normal;
 }
 
 body {
+  margin-top: calc(var(--spacing-headings) * 2);
+  margin-bottom: calc(var(--spacing-headings) * 2);
   font-family: var(--font-stack-sans-serif);
   background-color: var(--color-body);
   color: var(--color-text);
@@ -65,5 +77,16 @@ pre {
 
 code {
   font-family: var(--font-stack-monospace);
+}
+
+code:not(.hljs) {
+  padding-left: .5em;
+  padding-right: .5em;
+  border-radius: 4px;
+  background-color: white;
+}
+
+ol > li + li {
+  margin-top: var(--spacing-unit);
 }
 </style>

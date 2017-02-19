@@ -1,6 +1,6 @@
 <template>
   <div class="code-example">
-    <div class="code-example-demo">
+    <div class="code-example-demo" v-if="isSlotProvided">
       <slot></slot>
     </div>
     <pre v-highlightjs><code :class="syntax">{{ source }}</code></pre>
@@ -18,6 +18,11 @@ export default {
     source: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    isSlotProvided () {
+      return this.$slots.default !== undefined
     }
   }
 }
