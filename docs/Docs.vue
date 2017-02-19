@@ -35,6 +35,7 @@ export default {
 }
 </script>
 
+<style src="normalize.css"></style>
 <style src="sensible.css"></style>
 <style>
 @import 'variables.css';

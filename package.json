@@ -54,6 +54,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "jest": "^18.1.0",
     "jest-vue-preprocessor": "^0.1.2",
+    "normalize.css": "^5.0.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.1.0",
     "push-dir": "^0.4.1",

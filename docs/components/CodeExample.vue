@@ -35,6 +35,7 @@ export default {
   background-color: white;
   border: 2px solid var(--color-secondary);
   border-radius: 4px;
+  margin-bottom: var(--spacing-unit);
 }
 
 .code-example-demo {
@@ -44,8 +45,7 @@ export default {
 }
 
 .hljs {
-  font-size: .8rem;
-  line-height: 1.4;
+  line-height: var(--font-leading);
 }
 
 .code-example-demo .vfg-grid-item {
