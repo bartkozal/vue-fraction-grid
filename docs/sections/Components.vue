@@ -163,7 +163,7 @@
     </code-example>
     <code-example syntax="html" :source="exampleGridVerticalBottom">
       <container>
-        <grid vertical="middle">
+        <grid vertical="bottom">
           <grid-item size="1/4">
             1/4
           </grid-item>
