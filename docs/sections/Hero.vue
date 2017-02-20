@@ -18,7 +18,7 @@
             1/6
           </grid-item>
 
-          <grid-item size="3/6" :rwd="{compact: '1/1'}">
+          <grid-item size="3/6" :rwd="{compact: '1/1'}" class="large">
             3/6
           </grid-item>
 
