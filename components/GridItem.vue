@@ -53,11 +53,8 @@ export default {
         paddingRight: this.horizontalPadding,
         paddingLeft: this.horizontalPadding
       }
-      const isSize = !isUndefined(this.size) && isUndefined(this.grow) && isUndefined(this.shrink)
-      const isGrow = isUndefined(this.size) && !isUndefined(this.grow) && isUndefined(this.shrink)
-      const isShrink = isUndefined(this.size) && isUndefined(this.grow) && !isUndefined(this.shrink)
 
-      if (isSize) {
+      if (this.hasSize) {
         return Object.assign(stylePadding, {
           width: this.percentageWidth,
           flexBasis: this.percentageWidth,
@@ -65,19 +62,28 @@ export default {
         })
       }
 
-      if (isGrow) {
+      if (this.hasGrow) {
         return Object.assign(stylePadding, {
           flexGrow: +this.grow
         })
       }
 
-      if (isShrink) {
+      if (this.hasShrink) {
         return Object.assign(stylePadding, {
           flexShrink: +this.shrink
         })
       }
 
       return stylePadding
+    },
+    hasSize () {
+      return !isUndefined(this.size) && isUndefined(this.grow) && isUndefined(this.shrink)
+    },
+    hasGrow () {
+      return isUndefined(this.size) && !isUndefined(this.grow) && isUndefined(this.shrink)
+    },
+    hasShrink () {
+      return isUndefined(this.size) && isUndefined(this.grow) && !isUndefined(this.shrink)
     },
     horizontalPadding () {
       const notFlatGridChild = isUndefined(this.$parent) || isUndefined(this.$parent.flat)

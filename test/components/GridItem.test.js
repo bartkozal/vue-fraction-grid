@@ -80,3 +80,21 @@ test('isSizeZero', () => {
   expect(getGridItem({ size: '5/8' }).isSizeZero).toEqual(false)
   expect(getGridItem({ size: '0/1' }).isSizeZero).toEqual(true)
 })
+
+test('hasSize', () => {
+  expect(getGridItem({ size: '1/2' }).hasSize).toEqual(true)
+  expect(getGridItem({ grow: '2' }).hasSize).toEqual(false)
+  expect(getGridItem({ shrink: '1' }).hasSize).toEqual(false)
+})
+
+test('hasGrow', () => {
+  expect(getGridItem({ size: '1/2' }).hasGrow).toEqual(false)
+  expect(getGridItem({ grow: '2' }).hasGrow).toEqual(true)
+  expect(getGridItem({ shrink: '1' }).hasGrow).toEqual(false)
+})
+
+test('hasShrink', () => {
+  expect(getGridItem({ size: '1/2' }).hasShrink).toEqual(false)
+  expect(getGridItem({ grow: '2' }).hasShrink).toEqual(false)
+  expect(getGridItem({ shrink: '1' }).hasShrink).toEqual(true)
+})
