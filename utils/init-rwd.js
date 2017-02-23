@@ -1,5 +1,4 @@
 import mediaQueryString from './media-query-string'
-import forEach from 'lodash.foreach'
 import isUndefined from './is-undefined'
 
 export default {
@@ -9,13 +8,14 @@ export default {
   methods: {
     bindMediaQueries (callback) {
       if (!isUndefined(this.rwd)) {
-        forEach(this.rwd, (prop, breakpoint) => {
+        Object.keys(this.rwd).forEach(breakpoint => {
           const mediaQuery = window.matchMedia(mediaQueryString({
             approach: this.config.approach,
             query: this.config.breakpoints[breakpoint]
           }))
+          const property = this.rwd[breakpoint]
 
-          callback(mediaQuery, prop)
+          callback(mediaQuery, property)
         })
       }
     }
