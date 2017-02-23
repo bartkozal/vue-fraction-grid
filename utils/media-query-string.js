@@ -1,4 +1,4 @@
-import isUndefined from 'lodash.isundefined'
+import isUndefined from './is-undefined'
 
 export default ({ approach, query }) => {
   const attr = { 'mobile-first': 'min-width', 'desktop-first': 'max-width' }[approach]

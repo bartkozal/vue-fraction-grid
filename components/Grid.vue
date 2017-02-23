@@ -6,7 +6,7 @@
 
 <script>
 import reduceCSSCalc from 'reduce-css-calc'
-import isUndefined from 'lodash.isundefined'
+import isUndefined from '../utils/is-undefined'
 import initConfig from '../utils/init-config'
 import initRWD from '../utils/init-rwd'
 

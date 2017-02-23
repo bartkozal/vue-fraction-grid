@@ -1,6 +1,6 @@
 import mediaQueryString from './media-query-string'
 import forEach from 'lodash.foreach'
-import isUndefined from 'lodash.isundefined'
+import isUndefined from './is-undefined'
 
 export default {
   props: {
