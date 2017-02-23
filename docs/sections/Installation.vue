@@ -17,7 +17,7 @@
       </li>
 
       <li>
-        Now you have access to three global components in your templates: <code>&lt;container&gt;</code>, <code>&lt;grid&gt;</code>, <code>&lt;grid-item&gt;</code>
+        Now you have access in your templates to <code>&lt;container&gt;</code>, <code>&lt;grid&gt;</code> and <code>&lt;grid-item&gt;</code> components.
       </li>
     </ol>
   </section>

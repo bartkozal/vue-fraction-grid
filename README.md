@@ -45,7 +45,7 @@ Flexbox based responsive fraction grid system for Vue.js
     Vue.use(VueFractionGrid)
     ```
 
-3. Now you have access to three global components in your templates: `<container>`, `<grid>`, `<grid-item>`
+3. Now you have access in your templates to `<container>`, `<grid>` and `<grid-item>` components.
 
 ## Settings
 
