@@ -1,3 +1,3 @@
 export default (value) => {
- return value === undefined
+  return value === undefined
 }
