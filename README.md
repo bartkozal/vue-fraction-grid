@@ -26,26 +26,77 @@ Flexbox based responsive fraction grid system for Vue.js
 
 ## Installation
 
-1. Install package using `yarn` or `npm`:
+Install the package using `yarn` or `npm`:
 
-    ```sh
-    $ yarn add vue-fraction-grid
+```sh
+$ yarn add vue-fraction-grid
 
-    # or
+# or
 
-    $ npm install --save vue-fraction-grid
-    ```
+$ npm install --save vue-fraction-grid
+```
 
-2. Load the plugin by calling `Vue.use()`:
+### Global
 
-    ```js
-    import Vue from 'vue'
-    import VueFractionGrid from 'vue-fraction-grid'
+Load the plugin by calling `Vue.use()`:
 
-    Vue.use(VueFractionGrid)
-    ```
+```js
+import Vue from 'vue'
+import VueFractionGrid from 'vue-fraction-grid'
 
-3. Now you have access in your templates to `<container>`, `<grid>` and `<grid-item>` components.
+Vue.use(VueFractionGrid)
+```
+
+Now you have access in your templates to `<container>`, `<grid>` and `<grid-item>` components.
+
+### Local
+
+You may prefer to explicitly import the components in your templates:
+
+```vue
+<template>
+  <container>
+    <grid>
+      <grid-item size="1/2">
+        ...
+      </grid-item>
+      <grid-item size="1/2">
+        ...
+      </grid-item>
+    </grid>
+  </container>
+</template>
+
+<script>
+import Container from 'vue-fraction-grid/components/Container'
+import Grid from 'vue-fraction-grid/components/Grid'
+import GridItem from 'vue-fraction-grid/components/GridItem'
+
+export default {
+  components: {
+    Container,
+    Grid,
+    GridItem
+  }
+}
+</script>
+```
+
+### CDN
+
+Load the script file from CDN:
+
+```html
+<div id="root"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+<script src="//rawgit.com/bkzl/vue-fraction-grid/v1.0.2/dist/vue-fraction-grid.js"></script>
+<script>
+  new Vue({
+    el: '#root',
+    template: '<container>...</container>'
+  })
+</script>
+```
 
 ## Settings
 

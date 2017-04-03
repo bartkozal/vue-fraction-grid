@@ -13,4 +13,8 @@ const VueFractionGrid = {
   }
 }
 
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(VueFractionGrid)
+}
+
 export default VueFractionGrid
