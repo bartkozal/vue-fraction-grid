@@ -1,6 +1,6 @@
 {
   "name": "vue-fraction-grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flexbox based responsive fraction grid system for Vue.js",
   "main": "dist/vue-fraction-grid.js",
   "repository": "git@github.com:bkzl/vue-fraction-grid.git",
