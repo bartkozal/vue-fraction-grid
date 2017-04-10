@@ -22,7 +22,8 @@
   "files": [
     "vue-fraction-grid.js",
     "components",
-    "utils"
+    "utils",
+    "dist"
   ],
   "keywords": [
     "vue",
