@@ -89,7 +89,7 @@ Load the script file from CDN:
 ```html
 <div id="root"></div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
-<script src="//rawgit.com/bkzl/vue-fraction-grid/v1.0.2/dist/vue-fraction-grid.js"></script>
+<script src="//unpkg.com/vue-fraction-grid"></script>
 <script>
   new Vue({
     el: '#root',
