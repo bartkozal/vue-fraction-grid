@@ -434,6 +434,7 @@ Mix responsive design props for grid and items.
     lint   - Lint JS and CSS code of components, utils and installation
     docs   - Start docs locally
     deploy - Deploy docs to GitHub Pages
+    dist   - Create an optimized bundle in UMD format
     ```
 
 * * *
