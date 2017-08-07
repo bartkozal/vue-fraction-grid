@@ -18,6 +18,7 @@ export default {
     vertical: String,
     flat: String,
     pair: String,
+    nowrap: String,
     direction: {
       type: String,
       default: 'row'
@@ -54,7 +55,8 @@ export default {
         marginLeft: this.horizontalMargin,
         justifyContent: this.gridHorizontal,
         alignItems: this.gridVertical,
-        flexDirection: this.gridDirection
+        flexDirection: this.gridDirection,
+        flexWrap: isUndefined(this.nowrap) ? 'wrap' : 'nowrap'
       }
     },
     horizontalMargin () {
@@ -104,7 +106,6 @@ export default {
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
-  flex-wrap: wrap;
 }
 
 .vfg-grid-pair > .vfg-grid-item {
