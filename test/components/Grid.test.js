@@ -98,7 +98,7 @@ test('wrap', () => {
     config
   }).$mount()
 
-  expect(vm.styleObject).toInclude({
+  expect(vm.styleObject).toMatchObject({
     flexWrap: 'wrap'
   })
 })
