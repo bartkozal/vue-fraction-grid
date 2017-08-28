@@ -248,6 +248,35 @@
       </container>
     </code-example>
 
+    <p>
+      Set the grid items wrap. This works simillar to
+      <code>flex-wrap</code> attribute.
+    </p>
+    <code-example syntax="html" :source="exampleGridNowrap">
+      <container>
+        <grid wrap="nowrap">
+          <grid-item size="2/6">
+            2/6
+          </grid-item>
+          <grid-item size="5/6">
+            5/6
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+    <code-example syntax="html" :source="exampleGridWrapReverse">
+      <container>
+        <grid wrap="wrap-reverse">
+          <grid-item size="2/6">
+            2/6
+          </grid-item>
+          <grid-item size="5/6">
+            5/6
+          </grid-item>
+        </grid>
+      </container>
+    </code-example>
+
     <p>Mix props however you want to.</p>
     <code-example syntax="html" :source="exampleGridMix">
       <container>
@@ -476,6 +505,26 @@ export default {
       exampleGridStackReverse: html`
         <grid direction="stack-reverse">
           <grid-item size="1/6">
+            ...
+          </grid-item>
+          <grid-item size="5/6">
+            ...
+          </grid-item>
+        </grid>
+      `,
+      exampleGridNowrap: html`
+        <grid wrap="nowrap">
+          <grid-item size="2/6">
+            ...
+          </grid-item>
+          <grid-item size="5/6">
+            ...
+          </grid-item>
+        </grid>
+      `,
+      exampleGridWrapReverse: html`
+        <grid wrap="wrap-reverse">
+          <grid-item size="2/6">
             ...
           </grid-item>
           <grid-item size="5/6">
