@@ -21,6 +21,10 @@ export default {
     direction: {
       type: String,
       default: 'row'
+    },
+    wrap: {
+      type: String,
+      default: 'wrap'
     }
   },
   created () {
@@ -54,7 +58,8 @@ export default {
         marginLeft: this.horizontalMargin,
         justifyContent: this.gridHorizontal,
         alignItems: this.gridVertical,
-        flexDirection: this.gridDirection
+        flexDirection: this.gridDirection,
+        flexWrap: this.wrap
       }
     },
     horizontalMargin () {
