@@ -167,6 +167,7 @@ Syntax:
 <grid [horizontal="left|center|right"
       vertical="top|middle|bottom"
       direction="reverse|stack|stack-reverse"
+      wrap="nowrap|wrap-reverse"
       :rwd="{ breakpointName: direction }"
       flat
       pair]>
@@ -292,6 +293,20 @@ Set the grid items direction. This works simillar to `flex-direction` attribute.
 
 ```html
 <grid direction="stack-reverse">
+  ...
+</grid>
+```
+
+Set the grid items wrap. This works simillar to `flex-wrap` attribute.
+
+```html
+<grid wrap="nowrap">
+  ...
+</grid>
+```
+
+```html
+<grid wrap="wrap-reverse">
   ...
 </grid>
 ```
