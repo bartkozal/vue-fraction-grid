@@ -33,6 +33,7 @@ test('styleObject', () => {
     marginLeft: '-12px',
     justifyContent: undefined,
     alignItems: undefined,
+    flexWrap: 'wrap',
     flexDirection: 'row'
   })
 })
@@ -52,6 +53,7 @@ test('styleObject with horizontal and vertical props', () => {
     marginLeft: '-12px',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    flexWrap: 'wrap',
     flexDirection: 'row'
   })
 })
