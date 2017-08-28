@@ -24,7 +24,7 @@ export default {
     },
     wrap: {
       type: String,
-      default: 'wrap'
+      default: 'nowrap'
     }
   },
   created () {

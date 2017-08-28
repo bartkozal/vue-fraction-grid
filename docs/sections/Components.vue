@@ -252,9 +252,9 @@
       Set the grid items wrap. This works simillar to
       <code>flex-wrap</code> attribute.
     </p>
-    <code-example syntax="html" :source="exampleGridNowrap">
+    <code-example syntax="html" :source="exampleGridWrap">
       <container>
-        <grid wrap="nowrap">
+        <grid wrap="wrap">
           <grid-item size="2/6">
             2/6
           </grid-item>
@@ -512,8 +512,8 @@ export default {
           </grid-item>
         </grid>
       `,
-      exampleGridNowrap: html`
-        <grid wrap="nowrap">
+      exampleGridWrap: html`
+        <grid wrap="wrap">
           <grid-item size="2/6">
             ...
           </grid-item>

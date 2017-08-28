@@ -33,7 +33,7 @@ test('styleObject', () => {
     marginLeft: '-12px',
     justifyContent: undefined,
     alignItems: undefined,
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     flexDirection: 'row'
   })
 })
@@ -53,7 +53,7 @@ test('styleObject with horizontal and vertical props', () => {
     marginLeft: '-12px',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     flexDirection: 'row'
   })
 })
@@ -89,6 +89,19 @@ test('pair', () => {
   })
 })
 
+test('wrap', () => {
+  const vm = new Vue({
+    extends: Grid,
+    propsData: {
+      wrap: 'wrap'
+    },
+    config
+  }).$mount()
+
+  expect(vm.styleObject).toInclude({
+    flexWrap: 'wrap'
+  })
+})
 
 describe('rwd', () => {
   test('override grid direction when prop exists and media matches', () => {
