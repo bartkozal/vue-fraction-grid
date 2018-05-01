@@ -1,6 +1,4 @@
-# vue-fraction-grid
-
-[![Build Status](https://travis-ci.org/bkzl/vue-fraction-grid.svg?branch=master)](https://travis-ci.org/bkzl/vue-fraction-grid)
+# vue-fraction-grid [![Build Status](https://semaphoreci.com/api/v1/bkzl/vue-fraction-grid/branches/master/shields_badge.svg)](https://semaphoreci.com/bkzl/vue-fraction-grid)
 
 Flexbox based responsive fraction grid system for Vue.js
 
@@ -41,10 +39,10 @@ $ npm install --save vue-fraction-grid
 Load the plugin by calling `Vue.use()`:
 
 ```js
-import Vue from 'vue'
-import VueFractionGrid from 'vue-fraction-grid'
+import Vue from "vue";
+import VueFractionGrid from "vue-fraction-grid";
 
-Vue.use(VueFractionGrid)
+Vue.use(VueFractionGrid);
 ```
 
 Now you have access in your templates to `<container>`, `<grid>` and `<grid-item>` components.
@@ -68,9 +66,9 @@ You may prefer to explicitly import the components in your templates:
 </template>
 
 <script>
-import Container from 'vue-fraction-grid/components/Container'
-import Grid from 'vue-fraction-grid/components/Grid'
-import GridItem from 'vue-fraction-grid/components/GridItem'
+import Container from "vue-fraction-grid/components/Container";
+import Grid from "vue-fraction-grid/components/Grid";
+import GridItem from "vue-fraction-grid/components/GridItem";
 
 export default {
   components: {
@@ -78,7 +76,7 @@ export default {
     Grid,
     GridItem
   }
-}
+};
 </script>
 ```
 
@@ -102,13 +100,13 @@ Load the script file from CDN:
 
 ```js
 Vue.use(VueFractionGrid, {
-  container: '1020px',
-  gutter: '24px',
-  approach: 'mobile-first',
+  container: "1020px",
+  gutter: "24px",
+  approach: "mobile-first",
   breakpoints: {
-    compact: '320px 414px'
+    compact: "320px 414px"
   }
-})
+});
 ```
 
 Configure grid by passing options as a second argument of `Vue.use()`. Configuration is merged to defaults that are listed above.
@@ -378,19 +376,23 @@ Following configuration:
 
 ```js
 Vue.use(VueFractionGrid, {
-  approach: 'desktop-first',
+  approach: "desktop-first",
   breakpoints: {
-    compact: '415px',
-    tablet: '416px 1100px'
+    compact: "415px",
+    tablet: "416px 1100px"
   }
-})
+});
 ```
 
 Is translated to this declaration from CSS:
 
 ```css
-@media (max-width: 415px) { ... } /* compact */
-@media (min-width: 416px) and (max-width: 1100px) { ... } /* tablet */
+@media (max-width: 415px) {
+  ...;
+} /* compact */
+@media (min-width: 416px) and (max-width: 1100px) {
+  ...;
+} /* tablet */
 ```
 
 ### API
@@ -435,13 +437,13 @@ Mix responsive design props for grid and items.
 
 ## Development
 
-1. Clone the repository:
+1.  Clone the repository:
 
     ```sh
     $ git clone git@github.com:bkzl/vue-fraction-grid.git
     ```
 
-2. Run scripts from package.json using `npm run` / `yarn run` in the main directory:
+2.  Run scripts from package.json using `npm run` / `yarn run` in the main directory:
 
     ```
     demo   - Start demo page with implementation of all examples
@@ -452,7 +454,7 @@ Mix responsive design props for grid and items.
     dist   - Create an optimized bundle in UMD format
     ```
 
-* * *
+---
 
 Code is open sourced [on GitHub](https://github.com/bkzl/vue-fraction-grid). Up to date changelog is available under [the releases section](https://github.com/bkzl/vue-fraction-grid/releases).
 
