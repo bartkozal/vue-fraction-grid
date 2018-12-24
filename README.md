@@ -1,4 +1,4 @@
-# vue-fraction-grid [![Build Status](https://semaphoreci.com/api/v1/bkzl/vue-fraction-grid/branches/master/shields_badge.svg)](https://semaphoreci.com/bkzl/vue-fraction-grid)
+# vue-fraction-grid
 
 Flexbox based responsive fraction grid system for Vue.js
 
@@ -457,5 +457,3 @@ Mix responsive design props for grid and items.
 ---
 
 Code is open sourced [on GitHub](https://github.com/bkzl/vue-fraction-grid). Up to date changelog is available under [the releases section](https://github.com/bkzl/vue-fraction-grid/releases).
-
-I appreciate any comments, feedback, and information about potential issues. Have you experienced a bug or noticed a mistake in documentation? Please [add a new issue](https://github.com/bkzl/vue-fraction-grid/issues). Thanks!

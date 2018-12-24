@@ -54,13 +54,6 @@
       Up to date changelog is available under
       <a href="https://github.com/bkzl/vue-fraction-grid/releases">the releases section</a>.
     </p>
-
-    <p>
-      I appreciate any comments, feedback, and information about potential issues.
-      Have you experienced a bug or noticed a mistake in documentation? Please
-      <a href="https://github.com/bkzl/vue-fraction-grid/issues">add a new issue</a>.
-      Thanks!
-    </p>
   </section>
 </template>
 
