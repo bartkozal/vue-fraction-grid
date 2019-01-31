@@ -50,9 +50,9 @@
     <hr>
 
     <p>
-      Code is open sourced <a href="https://github.com/bkzl/vue-fraction-grid">on GitHub</a>.
+      Code is open sourced <a href="https://github.com/brtjkzl/vue-fraction-grid">on GitHub</a>.
       Up to date changelog is available under
-      <a href="https://github.com/bkzl/vue-fraction-grid/releases">the releases section</a>.
+      <a href="https://github.com/brtjkzl/vue-fraction-grid/releases">the releases section</a>.
     </p>
   </section>
 </template>
@@ -69,7 +69,7 @@ export default {
   data () {
     return {
       exampleClone: html`
-        $ git clone git@github.com:bkzl/vue-fraction-grid.git
+        $ git clone git@github.com:brtjkzl/vue-fraction-grid.git
       `
     }
   }

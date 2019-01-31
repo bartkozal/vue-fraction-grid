@@ -5,7 +5,7 @@
     </h1>
     <p class="hero-author">
       <small>
-        Created and maintained by <a href="https://twitter.com/_bkzl">@_bkzl</a>
+        Created and maintained by <a href="https://twitter.com/_brtjkzl">@_brtjkzl</a>
       </small>
     </p>
     <p class="hero-tagline">

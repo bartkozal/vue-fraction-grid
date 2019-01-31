@@ -2,7 +2,7 @@
 
 Flexbox based responsive fraction grid system for Vue.js
 
-### [Live Demo and Full Documentation](https://bkzl.github.io/vue-fraction-grid)
+### [Live Demo and Full Documentation](https://brtjkzl.github.io/vue-fraction-grid)
 
 ```html
 <container>
@@ -90,9 +90,9 @@ Load the script file from CDN:
 <script src="//unpkg.com/vue-fraction-grid"></script>
 <script>
   new Vue({
-    el: '#root',
-    template: '<container>...</container>'
-  })
+    el: "#root",
+    template: "<container>...</container>"
+  });
 </script>
 ```
 
@@ -132,7 +132,7 @@ breakpoints - List the grid breakpoints. Key is the breakpoint name for `:rwd` p
 Syntax:
 
 ```html
-<container [width="<length>|<percentage>"]>
+<container [width="<length>|<percentage>" ]></container>
 ```
 
 Center content of the site in the container:
@@ -162,13 +162,15 @@ Override container's maximum width with `width` prop. This is useful when you ne
 Syntax:
 
 ```html
-<grid [horizontal="left|center|right"
-      vertical="top|middle|bottom"
-      direction="reverse|stack|stack-reverse"
-      wrap="nowrap|wrap|wrap-reverse"
-      :rwd="{ breakpointName: direction }"
-      flat
-      pair]>
+<grid
+  [horizontal="left|center|right"
+  vertical="top|middle|bottom"
+  direction="reverse|stack|stack-reverse"
+  wrap="nowrap|wrap|wrap-reverse"
+  :rwd="{ breakpointName: direction }"
+  flat
+  pair]
+></grid>
 ```
 
 The most common usage and simple example of the grid:
@@ -322,8 +324,13 @@ Mix props however you want to.
 Syntax:
 
 ```html
-<grid-item size="<number>/<number>"|grow="<number>"|shrink="<number>"
-           [:rwd="{ breakpointName: size }"]>
+<grid-item
+  size="<number>/<number>"
+  |grow="<number>"
+  |shrink="<number>"
+  [:rwd="{ breakpointName: size }"
+  ]
+></grid-item>
 ```
 
 Use any size written in the fraction format. Grid item should be nested directly in the grid. Items fractions don't have to sum to 1. **Denominator can't be equal 0!**
@@ -440,7 +447,7 @@ Mix responsive design props for grid and items.
 1.  Clone the repository:
 
     ```sh
-    $ git clone git@github.com:bkzl/vue-fraction-grid.git
+    $ git clone git@github.com:brtjkzl/vue-fraction-grid.git
     ```
 
 2.  Run scripts from package.json using `npm run` / `yarn run` in the main directory:
@@ -456,4 +463,4 @@ Mix responsive design props for grid and items.
 
 ---
 
-Code is open sourced [on GitHub](https://github.com/bkzl/vue-fraction-grid). Up to date changelog is available under [the releases section](https://github.com/bkzl/vue-fraction-grid/releases).
+Code is open sourced [on GitHub](https://github.com/brtjkzl/vue-fraction-grid). Up to date changelog is available under [the releases section](https://github.com/brtjkzl/vue-fraction-grid/releases).

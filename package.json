@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "Flexbox based responsive fraction grid system for Vue.js",
   "main": "dist/vue-fraction-grid.js",
-  "repository": "git@github.com:bkzl/vue-fraction-grid.git",
-  "author": "Bartlomiej Kozal <bkzl@me.com>",
+  "repository": "git@github.com:brtjkzl/vue-fraction-grid.git",
+  "author": "Bart Kozal <brtjkzl@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "npm run demo",
